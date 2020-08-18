@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Develop on 萨雷斯煜</title>
+    <link>https://dev.hanry.top/tags/develop/</link>
+    <description>Recent content in Develop on 萨雷斯煜</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sat, 15 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://dev.hanry.top/tags/develop/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>“Switft5.1基础笔记&#34;</title>
+      <link>https://dev.hanry.top/posts/swift5.1%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev.hanry.top/posts/swift5.1%E5%9F%BA%E7%A1%80/</guid>
+      <description>常量和变量 常量声明let 变量声明var 例如： let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0 可以在一行中声明多个变量，类似C 例如： var a = 1 , b = 2 , c = 3 ⚠️一般不变的值用</description>
+    </item>
+    
+  </channel>
+</rss>
