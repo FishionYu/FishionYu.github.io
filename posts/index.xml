@@ -1,22 +1,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Posts on 萨雷斯煜</title>
-		<link>https://dev.hanry.top/posts/</link>
-		<description>Recent content in Posts on 萨雷斯煜</description>
-		<generator>Hugo -- gohugo.io</generator>
-		<language>zh-CN</language>
-		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate>
-		<atom:link href="https://dev.hanry.top/posts/index.xml" rel="self" type="application/rss+xml" />
-		
-		<item>
-			<title>Switft5.1基础运算符</title>
-			<link>https://dev.hanry.top/posts/swift5.1%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
-			<pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-			
-			<guid>https://dev.hanry.top/posts/swift5.1%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
-			<description>术语 运算符分为一元、二元和三元运算符： 一元运算符是对单一对象操作（例如+a, !b, c!） 二元运算符是对两个对象操作（例如a + b, a - b） 三元运算符</description>
-			<content type="html"><![CDATA[<h1 id="术语">术语</h1>
+    <channel>
+        <title>Posts on 萨雷斯煜のDev Note</title>
+        <link>https://dev.hanry.top/posts/</link>
+        <description>Recent content in Posts on 萨雷斯煜のDev Note</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://dev.hanry.top/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Switft5.1基础运算符</title>
+            <link>https://dev.hanry.top/posts/2020/09/switft5.1%E5%9F%BA%E7%A1%80%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+            <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+            
+            <guid>https://dev.hanry.top/posts/2020/09/switft5.1%E5%9F%BA%E7%A1%80%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
+            <description>术语 运算符分为一元、二元和三元运算符：
+ 一元运算符是对单一对象操作（例如+a, !b, c!） 二元运算符是对两个对象操作（例如a + b, a - b） 三元运算符是对三个对象操作，swift中只有一个就是a ? b : c   三元运算符意思是问题 ? 答案 1 : 答案 2，后文会讲到
+ 赋值运算符 赋值运算符（a = b），表示用 b 的值来初始化或更新 a 的值：
+let b = 10 var a = 5 a = b // a 现在等于 10 let (x, y) = (1, 2) // 现在 x 等于 1，y 等于 2 算数运算符 + - × ÷，大家都懂
+求余运算符 a &amp;amp; b 计算 b的多少倍刚刚好可以容入a，返回来多的数。</description>
+            <content type="html"><![CDATA[<h1 id="术语">术语</h1>
 <p>运算符分为一元、二元和三元运算符：</p>
 <ul>
 <li>一元运算符是对单一对象操作（例如<code>+a, !b, c!</code>）</li>
@@ -28,25 +32,25 @@
 </blockquote>
 <h1 id="赋值运算符">赋值运算符</h1>
 <p><em>赋值运算符</em>（<code>a = b</code>），表示用 <code>b</code> 的值来初始化或更新 <code>a</code> 的值：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">b</span> <span class="p">=</span> <span class="mi">10</span>
-<span class="kd">var</span> <span class="nv">a</span> <span class="p">=</span> <span class="mi">5</span>
-<span class="n">a</span> <span class="p">=</span> <span class="n">b</span>
-<span class="c1">// a 现在等于 10</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> b = <span style="color:#ae81ff">10</span>
+<span style="color:#66d9ef">var</span> a = <span style="color:#ae81ff">5</span>
+a = b
+<span style="color:#75715e">// a 现在等于 10</span>
 
-<span class="kd">let</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="p">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="c1">// 现在 x 等于 1，y 等于 2</span>
+<span style="color:#66d9ef">let</span> (x, y) = (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
+<span style="color:#75715e">// 现在 x 等于 1，y 等于 2</span>
 </code></pre></div><h1 id="算数运算符">算数运算符</h1>
 <p><code>+ - × ÷</code>，大家都懂</p>
 <h2 id="求余运算符">求余运算符</h2>
 <p><code>a &amp; b</code> 计算 <code>b</code>的多少倍刚刚好可以容入<code>a</code>，返回来多的数。</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="mi">9</span> <span class="o">%</span> <span class="mi">4</span>    <span class="c1">// 等于 1</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#ae81ff">9</span> <span style="color:#f92672">%</span> <span style="color:#ae81ff">4</span>    <span style="color:#75715e">// 等于 1</span>
 </code></pre></div><h2 id="一元正负运算符">一元正负运算符</h2>
 <p>就是 值 得正负，没什么好讲的。</p>
 <h1 id="组合赋值运算符">组合赋值运算符</h1>
 <p>Swift 也提供把其他运算符和赋值运算（<code>=</code>）组合的<em>组合赋值运算符</em>，组合加运算（<code>+=</code>）是其中一个例子：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">var</span> <span class="nv">a</span> <span class="p">=</span> <span class="mi">1</span>
-<span class="n">a</span> <span class="o">+=</span> <span class="mi">2</span>
-<span class="c1">// a 现在是 3</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">var</span> a = <span style="color:#ae81ff">1</span>
+a <span style="color:#f92672">+=</span> <span style="color:#ae81ff">2</span>
+<span style="color:#75715e">// a 现在是 3</span>
 </code></pre></div><p>表达式 <code>a += 2</code> 是 <code>a = a + 2</code> 的简写。</p>
 <blockquote>
 <p>⚠️注意</p>
@@ -72,43 +76,43 @@
 <h1 id="区间运算符">区间运算符</h1>
 <h2 id="闭区间运算符">闭区间运算符</h2>
 <p>（<code>a...b</code>）就是定义一个包含从 <code>a</code> 到 <code>b</code>（包括 <code>a</code> 和 <code>b</code>）的所有值的区间。</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="mf">1.</span><span class="p">..</span><span class="mi">5</span> <span class="c1">//1, 2, 3, 4, 5</span>
-<span class="mf">100.</span><span class="p">..</span><span class="mi">103</span> <span class="c1">//100, 101, 102, 103</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#ae81ff">1.</span>..<span style="color:#ae81ff">5</span> <span style="color:#75715e">//1, 2, 3, 4, 5</span>
+<span style="color:#ae81ff">100.</span>..<span style="color:#ae81ff">103</span> <span style="color:#75715e">//100, 101, 102, 103</span>
 </code></pre></div><blockquote>
 <p>闭区间运算符在迭代一个区间的所有值时是非常有用的，如在 for-in 循环中：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="k">for</span> <span class="n">index</span> <span class="k">in</span> <span class="mf">1.</span><span class="p">..</span><span class="mi">5</span> <span class="p">{</span>
-<span class="bp">print</span><span class="p">(</span><span class="s">&#34;</span><span class="si">\(</span><span class="n">index</span><span class="si">)</span><span class="s"> * 5 = </span><span class="si">\(</span><span class="n">index</span> <span class="o">*</span> <span class="mi">5</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
-<span class="p">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">for</span> index <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">1.</span>..<span style="color:#ae81ff">5</span> {
+print(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">\(</span>index<span style="color:#e6db74">)</span><span style="color:#e6db74"> * 5 = </span><span style="color:#e6db74">\(</span>index <span style="color:#f92672">*</span> <span style="color:#ae81ff">5</span><span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+}
 </code></pre></div></blockquote>
 <h2 id="半开区间运算符">半开区间运算符</h2>
 <p>（<code>a..&lt;b</code>）定义一个从 <code>a</code> 到 <code>b</code> 但不包括 <code>b</code> 的区间。</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="mi">1</span> <span class="p">..</span><span class="o">&lt;</span> <span class="mi">5</span> <span class="c1">//1, 2, 3 ,4</span>
-<span class="mi">16</span> <span class="p">..</span><span class="o">&lt;</span> <span class="mi">19</span> <span class="c1">//16, 17, 18</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#ae81ff">1</span> ..<span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span> <span style="color:#75715e">//1, 2, 3 ,4</span>
+<span style="color:#ae81ff">16</span> ..<span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">19</span> <span style="color:#75715e">//16, 17, 18</span>
 </code></pre></div><blockquote>
 <p>半开区间的实用性在于当你使用一个从 0 开始的列表（如数组）时，非常方便地从0数到列表的长度。</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">names</span> <span class="p">=</span> <span class="p">[</span><span class="s">&#34;Anna&#34;</span><span class="p">,</span> <span class="s">&#34;Alex&#34;</span><span class="p">,</span> <span class="s">&#34;Brian&#34;</span><span class="p">,</span> <span class="s">&#34;Jack&#34;</span><span class="p">]</span>
-<span class="kd">let</span> <span class="nv">count</span> <span class="p">=</span> <span class="n">names</span><span class="p">.</span><span class="bp">count</span>
-<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mf">0.</span><span class="p">.&lt;</span><span class="bp">count</span> <span class="p">{</span>
-    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;第 </span><span class="si">\(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="si">)</span><span class="s"> 个人叫 </span><span class="si">\(</span><span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="c1">// 第 1 个人叫 Anna</span>
-<span class="c1">// 第 2 个人叫 Alex</span>
-<span class="c1">// 第 3 个人叫 Brian</span>
-<span class="c1">// 第 4 个人叫 Jack</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> names = [<span style="color:#e6db74">&#34;Anna&#34;</span>, <span style="color:#e6db74">&#34;Alex&#34;</span>, <span style="color:#e6db74">&#34;Brian&#34;</span>, <span style="color:#e6db74">&#34;Jack&#34;</span>]
+<span style="color:#66d9ef">let</span> count = names.count
+<span style="color:#66d9ef">for</span> i <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">0.</span>.&lt;count {
+    print(<span style="color:#e6db74">&#34;第 </span><span style="color:#e6db74">\(</span>i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#e6db74">)</span><span style="color:#e6db74"> 个人叫 </span><span style="color:#e6db74">\(</span>names[i]<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+}
+<span style="color:#75715e">// 第 1 个人叫 Anna</span>
+<span style="color:#75715e">// 第 2 个人叫 Alex</span>
+<span style="color:#75715e">// 第 3 个人叫 Brian</span>
+<span style="color:#75715e">// 第 4 个人叫 Jack</span>
 </code></pre></div></blockquote>
 <h2 id="单侧区间">单侧区间</h2>
 <p>闭区间操作符有另一个表达形式，可以表达往一侧无限延伸的区间。</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">names</span> <span class="p">=</span> <span class="p">[</span><span class="s">&#34;Anna&#34;</span><span class="p">,</span> <span class="s">&#34;Alex&#34;</span><span class="p">,</span> <span class="s">&#34;Brian&#34;</span><span class="p">,</span> <span class="s">&#34;Jack&#34;</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">name</span> <span class="k">in</span> <span class="n">names</span><span class="p">[</span><span class="mf">2.</span><span class="p">..]</span> <span class="p">{</span>
-    <span class="bp">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>  <span class="c1">//从数组第3个值开始打印，打印到数组末</span>
-<span class="p">}</span>
-<span class="c1">// Brian</span>
-<span class="c1">// Jack</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> names = [<span style="color:#e6db74">&#34;Anna&#34;</span>, <span style="color:#e6db74">&#34;Alex&#34;</span>, <span style="color:#e6db74">&#34;Brian&#34;</span>, <span style="color:#e6db74">&#34;Jack&#34;</span>]
+<span style="color:#66d9ef">for</span> name <span style="color:#66d9ef">in</span> names[<span style="color:#ae81ff">2.</span>..] {
+    print(name)  <span style="color:#75715e">//从数组第3个值开始打印，打印到数组末</span>
+}
+<span style="color:#75715e">// Brian</span>
+<span style="color:#75715e">// Jack</span>
 </code></pre></div><p>你也可以查看一个单侧区间是否包含某个特定的值，就像下面展示的那样。</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">range</span> <span class="p">=</span> <span class="p">...</span><span class="mi">5</span>
-<span class="n">range</span><span class="p">.</span><span class="bp">contains</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>   <span class="c1">// false  都是Bool值，7明显不在...5的范围，返回false</span>
-<span class="n">range</span><span class="p">.</span><span class="bp">contains</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>   <span class="c1">// true   4在...5的范围，返回true</span>
-<span class="n">range</span><span class="p">.</span><span class="bp">contains</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>  <span class="c1">// true		即使符号为负依然在...5的范围，返回true</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> range = ...<span style="color:#ae81ff">5</span>
+range.contains(<span style="color:#ae81ff">7</span>)   <span style="color:#75715e">// false  都是Bool值，7明显不在...5的范围，返回false</span>
+range.contains(<span style="color:#ae81ff">4</span>)   <span style="color:#75715e">// true   4在...5的范围，返回true</span>
+range.contains(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)  <span style="color:#75715e">// true		即使符号为负依然在...5的范围，返回true</span>
 </code></pre></div><h1 id="逻辑运算符">逻辑运算符</h1>
 <ul>
 <li>逻辑非（<code>!a</code>）</li>
@@ -116,49 +120,61 @@
 <li>逻辑或（<code>a || b</code>）</li>
 </ul>
 ]]></content>
-		</item>
-		
-		<item>
-			<title>Switft5.1函数笔记</title>
-			<link>https://dev.hanry.top/posts/switft5.1%E5%87%BD%E6%95%B0/</link>
-			<pubDate>Sat, 29 Aug 2020 11:39:00 +0800</pubDate>
-			
-			<guid>https://dev.hanry.top/posts/switft5.1%E5%87%BD%E6%95%B0/</guid>
-			<description>[toc] 函数本质是什么 函数本质是用来复用一段代码 如何定义函数 函数定义使用func，以 func 作为前缀。指定函数返回类型时，用返回箭头 -&amp;gt;（一个连字</description>
-			<content type="html"><![CDATA[<p>[toc]</p>
+        </item>
+        
+        <item>
+            <title>Switft5.1函数笔记</title>
+            <link>https://dev.hanry.top/posts/2020/08/switft5.1%E5%87%BD%E6%95%B0%E7%AC%94%E8%AE%B0/</link>
+            <pubDate>Sat, 29 Aug 2020 11:39:00 +0800</pubDate>
+            
+            <guid>https://dev.hanry.top/posts/2020/08/switft5.1%E5%87%BD%E6%95%B0%E7%AC%94%E8%AE%B0/</guid>
+            <description>[toc]
+函数本质是什么 函数本质是用来复用一段代码
+如何定义函数 函数定义使用func，以 func 作为前缀。指定函数返回类型时，用返回箭头 -&amp;gt;（一个连字符后跟一个右尖括号）后跟返回类型的名称的方式来表示。
+基本语法是:
+func name(lastname: String, firstname: String) -&amp;gt; String{ ... } 意思是：
+func 函数名(参数一: 类型, 参数二: 类型, 以此类推) -&amp;gt; 返回值类型 { ... } 参数 参数的定义需要有名字和类型
+无参数函数 函数是可以没有参数的，当函数没有参数时，在函数名后还是需要一对圆括号。当被调用时，也需要在函数名后写一对圆括号。
+例如：
+func sayHelloWorld() -&amp;gt; String { return &amp;#34;hello, world&amp;#34; } print(sayHelloWorld()) // 打印“hello, world” 参数标签 每个函数参数都有一个参数标签（argument label）以及一个参数名称（parameter name），参数标签本质上是指向参数名称的。
+默认情况下，函数参数使用参数名称来作为它们的参数标签。
+如何指定参数标签 在参数名称前指定它的参数标签，中间以空格分隔
+例如：
+func gotowork(at time: String) { //at就是参数标签，time就是参数名称 print(&amp;#34;this time is \(time)&amp;#34;) } gotowork(at: &amp;#34;8:00&amp;#34;) // 输出this time is 8:00 //有了参数标签，有时会让代码更易读 调用函数读起来go to work at 8:00  调用函数的参数也是可以没有标签的，只需要在函数中定义参数时前面加一个_，即可忽略参数标签</description>
+            <content type="html"><![CDATA[<p>[toc]</p>
 <h1 id="函数本质是什么">函数本质是什么</h1>
 <p>函数本质是用来复用一段代码</p>
 <h2 id="如何定义函数">如何定义函数</h2>
 <p>函数定义使用func，以 <code>func</code> 作为前缀。指定函数返回类型时，用返回箭头 <code>-&gt;</code>（一个连字符后跟一个右尖括号）后跟返回类型的名称的方式来表示。</p>
 <p>基本语法是:</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">name</span><span class="p">(</span><span class="n">lastname</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">firstname</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">String</span><span class="p">{</span>
-  <span class="p">...</span>
-<span class="p">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">name</span>(lastname: String, firstname: String) -&gt; String{
+  ...
+}
 </code></pre></div><p>意思是：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="err">函数名</span><span class="p">(</span><span class="err">参数一</span><span class="p">:</span> <span class="err">类型</span><span class="p">,</span> <span class="err">参数二</span><span class="p">:</span> <span class="err">类型</span><span class="p">,</span> <span class="err">以此类推</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="err">返回值类型</span> <span class="p">{</span>
-  <span class="p">...</span>
-<span class="p">}</span>
-</code></pre></div><p>##参数</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#960050;background-color:#1e0010">函数名</span>(<span style="color:#960050;background-color:#1e0010">参数一</span>: <span style="color:#960050;background-color:#1e0010">类型</span>, <span style="color:#960050;background-color:#1e0010">参数二</span>: <span style="color:#960050;background-color:#1e0010">类型</span>, <span style="color:#960050;background-color:#1e0010">以此类推</span>) -&gt; <span style="color:#960050;background-color:#1e0010">返回值类型</span> {
+  ...
+}
+</code></pre></div><h2 id="参数">参数</h2>
 <p>参数的定义需要有名字和类型</p>
 <h3 id="无参数函数">无参数函数</h3>
 <p>函数是可以没有参数的，当函数没有参数时，在函数名后还是需要一对圆括号。当被调用时，也需要在函数名后写一对圆括号。</p>
 <p>例如：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">sayHelloWorld</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="s">&#34;hello, world&#34;</span>
-<span class="p">}</span>
-<span class="bp">print</span><span class="p">(</span><span class="n">sayHelloWorld</span><span class="p">())</span>
-<span class="c1">// 打印“hello, world”</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">sayHelloWorld</span>() -&gt; String {
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;hello, world&#34;</span>
+}
+print(sayHelloWorld())
+<span style="color:#75715e">// 打印“hello, world”</span>
 </code></pre></div><h3 id="参数标签">参数标签</h3>
 <p>每个函数参数都有一个<em>参数标签（argument label）<em>以及一个</em>参数名称（parameter name）</em>，参数标签本质上是指向参数名称的。</p>
 <p><strong>默认情况下，函数参数使用参数名称来作为它们的参数标签。</strong></p>
 <h4 id="如何指定参数标签">如何指定参数标签</h4>
 <p>在参数名称前指定它的参数标签，中间以空格分隔</p>
 <p>例如：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">gotowork</span><span class="p">(</span><span class="n">at</span> <span class="n">time</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//at就是参数标签，time就是参数名称</span>
-  	<span class="bp">print</span><span class="p">(</span><span class="s">&#34;this time is </span><span class="si">\(</span><span class="n">time</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="n">gotowork</span><span class="p">(</span><span class="n">at</span><span class="p">:</span> <span class="s">&#34;8:00&#34;</span><span class="p">)</span> <span class="c1">// 输出this time is 8:00</span>
-<span class="c1">//有了参数标签，有时会让代码更易读  调用函数读起来go to work at 8:00</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">gotowork</span>(at time: String) { <span style="color:#75715e">//at就是参数标签，time就是参数名称</span>
+  	print(<span style="color:#e6db74">&#34;this time is </span><span style="color:#e6db74">\(</span>time<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+}
+gotowork(at: <span style="color:#e6db74">&#34;8:00&#34;</span>) <span style="color:#75715e">// 输出this time is 8:00</span>
+<span style="color:#75715e">//有了参数标签，有时会让代码更易读  调用函数读起来go to work at 8:00</span>
 </code></pre></div><blockquote>
 <p>调用函数的参数也是可以没有标签的，只需要在函数中定义参数时前面加一个_，即可忽略参数标签</p>
 <p>例如<code>func sayHelloWorld(_ sentence: string) { ... }</code></p>
@@ -169,26 +185,26 @@
 <p>参数值在定义时可以默认给一个值。当默认值被定义后，调用这个函数时可以忽略这个参数。</p>
 <p><code>Func 函数名(参数名1: 参数类型1 = 默认值1，参数名2: 参数类型2 = 默认值2 )</code></p>
 <p>例如：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">check</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="s">&#34;none&#34;</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//name默认是none，age默认是1</span>
-    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;</span><span class="si">\(</span><span class="n">name</span><span class="si">)</span><span class="s">,</span><span class="si">\(</span><span class="n">age</span><span class="si">)</span><span class="s">,</span><span class="si">\(</span><span class="n">job</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
-<span class="p">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">check</span>(name: String = <span style="color:#e6db74">&#34;none&#34;</span>, age: Int = <span style="color:#ae81ff">1</span>, job: String) { <span style="color:#75715e">//name默认是none，age默认是1</span>
+    print(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">\(</span>name<span style="color:#e6db74">)</span><span style="color:#e6db74">,</span><span style="color:#e6db74">\(</span>age<span style="color:#e6db74">)</span><span style="color:#e6db74">,</span><span style="color:#e6db74">\(</span>job<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+}
 
-<span class="n">check</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="s">&#34;joy&#34;</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s">&#34;develop&#34;</span><span class="p">)</span> <span class="c1">//joy 18 develop</span>
-<span class="n">check</span><span class="p">(</span><span class="n">age</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">job</span><span class="p">:</span> <span class="s">&#34;student&#34;</span><span class="p">)</span>  <span class="c1">//none 1 student</span>
+check(name: <span style="color:#e6db74">&#34;joy&#34;</span>, age: <span style="color:#ae81ff">18</span>, job: <span style="color:#e6db74">&#34;develop&#34;</span>) <span style="color:#75715e">//joy 18 develop</span>
+check(age: <span style="color:#ae81ff">1</span>, job: <span style="color:#e6db74">&#34;student&#34;</span>)  <span style="color:#75715e">//none 1 student</span>
 </code></pre></div><h3 id="可变参数">可变参数</h3>
 <p>通过在变量类型名后面加入（<code>...</code>）的方式来定义可变参数。</p>
 <p>可变参数的传入值在函数体中变为此类型的一个数组。例如，一个叫做 <code>numbers</code> 的 <code>Double...</code> 型可变参数，在函数体内可以当做一个叫 <code>numbers</code> 的 <code>[Double]</code> 型的数组常量。</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">arithmeticMean</span><span class="p">(</span><span class="kc">_</span> <span class="n">numbers</span><span class="p">:</span> <span class="nb">Double</span><span class="p">...)</span> <span class="p">-&gt;</span> <span class="nb">Double</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nv">total</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">number</span> <span class="k">in</span> <span class="n">numbers</span> <span class="p">{</span>
-        <span class="n">total</span> <span class="o">+=</span> <span class="n">number</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="n">total</span> <span class="o">/</span> <span class="nb">Double</span><span class="p">(</span><span class="n">numbers</span><span class="p">.</span><span class="bp">count</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="n">arithmeticMean</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>  <span class="c1">//相当于number变成了一个数组[1,2,3,4,5]</span>
-<span class="c1">// 返回 3.0, 是这 5 个数的平均数。</span>
-<span class="n">arithmeticMean</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">8.25</span><span class="p">,</span> <span class="mf">18.75</span><span class="p">)</span>
-<span class="c1">// 返回 10.0, 是这 3 个数的平均数。</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">arithmeticMean</span>(<span style="color:#66d9ef">_</span> numbers: Double...) -&gt; Double {
+    <span style="color:#66d9ef">var</span> total: Double = <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> number <span style="color:#66d9ef">in</span> numbers {
+        total <span style="color:#f92672">+=</span> number
+    }
+    <span style="color:#66d9ef">return</span> total <span style="color:#f92672">/</span> Double(numbers.count)
+}
+arithmeticMean(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>)  <span style="color:#75715e">//相当于number变成了一个数组[1,2,3,4,5]</span>
+<span style="color:#75715e">// 返回 3.0, 是这 5 个数的平均数。</span>
+arithmeticMean(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">8.25</span>, <span style="color:#ae81ff">18.75</span>)
+<span style="color:#75715e">// 返回 10.0, 是这 3 个数的平均数。</span>
 </code></pre></div><blockquote>
 <p>需要注意的是：</p>
 <ol>
@@ -205,23 +221,23 @@
 <p>你只能传递变量给输入输出参数。你不能传入常量或者字面量，因为这些量是不能被修改的。当传入的参数作为输入输出参数时，需要在参数名前加 <code>&amp;</code> 符，表示这个值可以被函数修改。</p>
 <blockquote>
 <p>简单理解，就是假如有一个<code>func sum(name: inout String, age: inout Int){...}</code>，在外部调用函数时，<code>sum(name: ray, age: 18)</code>，其中的<code>ray</code>和<code>18</code>有可能会被函数改变</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="c1">//示例代码，快速搞懂</span>
-<span class="kd">func</span> <span class="nf">sum</span><span class="p">(</span><span class="n">v1</span><span class="p">:</span> <span class="kr">inout</span> <span class="nb">Int</span><span class="p">,</span> <span class="n">v2</span><span class="p">:</span> <span class="kr">inout</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">//这是一个输入输出函数</span>
-    <span class="kd">let</span> <span class="nv">copy</span> <span class="p">=</span> <span class="n">v1</span>
-    <span class="n">v1</span> <span class="p">=</span> <span class="n">v1</span> <span class="o">+</span> <span class="n">v2</span>
-    <span class="n">v2</span> <span class="p">=</span> <span class="n">copy</span> <span class="o">-</span> <span class="n">v2</span>
-<span class="p">}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">//示例代码，快速搞懂</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">sum</span>(v1: <span style="color:#66d9ef">inout</span> Int, v2: <span style="color:#66d9ef">inout</span> Int) {  <span style="color:#75715e">//这是一个输入输出函数</span>
+    <span style="color:#66d9ef">let</span> copy = v1
+    v1 = v1 <span style="color:#f92672">+</span> v2
+    v2 = copy <span style="color:#f92672">-</span> v2
+}
 
-<span class="kd">var</span> <span class="nv">num1</span> <span class="p">=</span> <span class="mi">1</span> <span class="c1">//看啊，num1是1</span>
-<span class="kd">var</span> <span class="nv">num2</span> <span class="p">=</span> <span class="mi">4</span> <span class="c1">//看啊，num2是4</span>
+<span style="color:#66d9ef">var</span> num1 = <span style="color:#ae81ff">1</span> <span style="color:#75715e">//看啊，num1是1</span>
+<span style="color:#66d9ef">var</span> num2 = <span style="color:#ae81ff">4</span> <span style="color:#75715e">//看啊，num2是4</span>
 
-<span class="bp">print</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">)</span> <span class="c1">//打印出来的确是 1 4</span>
+print(num1, num2) <span style="color:#75715e">//打印出来的确是 1 4</span>
 
-<span class="n">sum</span><span class="p">(</span><span class="n">v1</span><span class="p">:</span> <span class="p">&amp;</span><span class="n">num1</span><span class="p">,</span> <span class="n">v2</span><span class="p">:</span> <span class="p">&amp;</span><span class="n">num2</span><span class="p">)</span> <span class="c1">//调用函数sum</span>
-<span class="bp">print</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">)</span> <span class="c1">//打印出来就是5 -3，现在num1就是1+5=5， num2就是1-4=-3</span>
-<span class="c1">//那我在调用一次呢</span>
-<span class="n">sum</span><span class="p">(</span><span class="n">v1</span><span class="p">:</span> <span class="p">&amp;</span><span class="n">num1</span><span class="p">,</span> <span class="n">v2</span><span class="p">:</span> <span class="p">&amp;</span><span class="n">num2</span><span class="p">)</span> <span class="c1">//再次调用函数sum</span>
-<span class="bp">print</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">)</span> <span class="c1">//打印出来就是2 8，现在num1就是5+(-3)=2， num2就是5-(-3)=8</span>
+sum(v1: &amp;num1, v2: &amp;num2) <span style="color:#75715e">//调用函数sum</span>
+print(num1, num2) <span style="color:#75715e">//打印出来就是5 -3，现在num1就是1+5=5， num2就是1-4=-3</span>
+<span style="color:#75715e">//那我在调用一次呢</span>
+sum(v1: &amp;num1, v2: &amp;num2) <span style="color:#75715e">//再次调用函数sum</span>
+print(num1, num2) <span style="color:#75715e">//打印出来就是2 8，现在num1就是5+(-3)=2， num2就是5-(-3)=8</span>
 </code></pre></div></blockquote>
 <h2 id="返回值">返回值</h2>
 <p>函数里面默认是有返回值<code>return</code></p>
@@ -230,51 +246,62 @@
 <p>函数可以没有返回值。</p>
 <p>因为这个函数不需要返回值，所以这个函数的定义中没有返回箭头（-&gt;）和返回类型。</p>
 <p>下面是 <code>greet(person:)</code> 函数的另一个版本，这个函数直接打印一个 <code>String</code> 值，而不是返回它：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">greet</span><span class="p">(</span><span class="n">person</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">{</span>
-    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Hello, </span><span class="si">\(</span><span class="n">person</span><span class="si">)</span><span class="s">!&#34;</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="n">greet</span><span class="p">(</span><span class="n">person</span><span class="p">:</span> <span class="s">&#34;Dave&#34;</span><span class="p">)</span>
-<span class="c1">// 打印“Hello, Dave!”</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">greet</span>(person: String) {
+    print(<span style="color:#e6db74">&#34;Hello, </span><span style="color:#e6db74">\(</span>person<span style="color:#e6db74">)</span><span style="color:#e6db74">!&#34;</span>)
+}
+greet(person: <span style="color:#e6db74">&#34;Dave&#34;</span>)
+<span style="color:#75715e">// 打印“Hello, Dave!”</span>
 </code></pre></div><h3 id="多重返回值函数">多重返回值函数</h3>
 <p>你可以用元组（tuple）类型让多个值作为一个复合值从函数中返回。</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">minMax</span><span class="p">(</span><span class="n">array</span><span class="p">:</span> <span class="p">[</span><span class="nb">Int</span><span class="p">])</span> <span class="p">-&gt;</span> <span class="p">(</span><span class="bp">min</span><span class="p">:</span> <span class="nb">Int</span><span class="p">,</span> <span class="bp">max</span><span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nv">currentMin</span> <span class="p">=</span> <span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="kd">var</span> <span class="nv">currentMax</span> <span class="p">=</span> <span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="k">for</span> <span class="n">value</span> <span class="k">in</span> <span class="n">array</span><span class="p">[</span><span class="mf">1.</span><span class="p">.&lt;</span><span class="n">array</span><span class="p">.</span><span class="bp">count</span><span class="p">]</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="n">currentMin</span> <span class="p">{</span>
-            <span class="n">currentMin</span> <span class="p">=</span> <span class="n">value</span>
-        <span class="p">}</span>
-        <span class="k">else</span> <span class="k">if</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="n">currentMax</span> <span class="p">{</span>
-            <span class="n">currentMax</span> <span class="p">=</span> <span class="n">value</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">currentMin</span><span class="p">,</span> <span class="n">currentMax</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="bp">print</span><span class="p">(</span><span class="n">minMax</span><span class="p">(</span><span class="n">array</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">]))</span>  <span class="c1">// 这是一个元组(min: 1, max: 9)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">minMax</span>(array: [Int]) -&gt; (min: Int, max: Int) {
+    <span style="color:#66d9ef">var</span> currentMin = array[<span style="color:#ae81ff">0</span>]
+    <span style="color:#66d9ef">var</span> currentMax = array[<span style="color:#ae81ff">0</span>]
+    <span style="color:#66d9ef">for</span> value <span style="color:#66d9ef">in</span> array[<span style="color:#ae81ff">1.</span>.&lt;array.count] {
+        <span style="color:#66d9ef">if</span> value <span style="color:#f92672">&lt;</span> currentMin {
+            currentMin = value
+        }
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> value <span style="color:#f92672">&gt;</span> currentMax {
+            currentMax = value
+        }
+    }
+    <span style="color:#66d9ef">return</span> (currentMin, currentMax)
+}
+print(minMax(array: [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">8</span>]))  <span style="color:#75715e">// 这是一个元组(min: 1, max: 9)</span>
 
-<span class="kd">let</span> <span class="nv">tumple</span> <span class="p">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
+<span style="color:#66d9ef">let</span> tumple = [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">8</span>]
 
-<span class="bp">print</span><span class="p">(</span><span class="s">&#34;this is </span><span class="si">\(</span><span class="n">minMax</span><span class="si">(</span><span class="n">array</span><span class="p">:</span> <span class="n">tumple</span><span class="si">)</span><span class="p">.</span><span class="mi">0</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span> <span class="c1">// this is 1 第一个元组值</span>
-<span class="bp">print</span><span class="p">(</span><span class="s">&#34;this is </span><span class="si">\(</span><span class="n">minMax</span><span class="si">(</span><span class="n">array</span><span class="p">:</span> <span class="n">tumple</span><span class="si">)</span><span class="p">.</span><span class="bp">max</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span> <span class="c1">// this is 9  元组max对应的值</span>
+print(<span style="color:#e6db74">&#34;this is </span><span style="color:#e6db74">\(</span>minMax<span style="color:#e6db74">(</span>array: tumple<span style="color:#e6db74">)</span>.<span style="color:#ae81ff">0</span><span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>) <span style="color:#75715e">// this is 1 第一个元组值</span>
+print(<span style="color:#e6db74">&#34;this is </span><span style="color:#e6db74">\(</span>minMax<span style="color:#e6db74">(</span>array: tumple<span style="color:#e6db74">)</span>.max<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>) <span style="color:#75715e">// this is 9  元组max对应的值</span>
 </code></pre></div>]]></content>
-		</item>
-		
-		<item>
-			<title>Switft5.1基础笔记</title>
-			<link>https://dev.hanry.top/posts/swift5.1%E5%9F%BA%E7%A1%80/</link>
-			<pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
-			
-			<guid>https://dev.hanry.top/posts/swift5.1%E5%9F%BA%E7%A1%80/</guid>
-			<description>常量和变量 常量声明let 变量声明var 例如： let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0 可以在一行中声明多个变量，类似C 例如： var a = 1 , b = 2 , c = 3 ⚠️一般不变的值用</description>
-			<content type="html"><![CDATA[<h1 id="常量和变量">常量和变量</h1>
+        </item>
+        
+        <item>
+            <title>Switft5.1基础笔记</title>
+            <link>https://dev.hanry.top/posts/2020/08/switft5.1%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</link>
+            <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+            
+            <guid>https://dev.hanry.top/posts/2020/08/switft5.1%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</guid>
+            <description>常量和变量 常量声明let
+变量声明var
+例如：
+let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0 可以在一行中声明多个变量，类似C
+例如：
+var a = 1 , b = 2 , c = 3  ⚠️一般不变的值用常量let,var只声明会变化的值，防止出错
+ 类型注解 类型注解是声明常量或者变量的时候，说明常量或者变量中要存储的值的类型。
+如果要添加类型注解，需要在常量或者变量名后面加上一个冒号和空格，然后加上类型名称。
+例如：
+var welcomeMessage: String //说明 在此声明的 welcomeMessage 只能为String类型 //welcomeMessage 可以设置为任意字符串 welcomeMessage = &amp;#34;Hello world&amp;#34; ✔️ welcomeMessage = &amp;#34;12&amp;#34; ✔️ welcomeMessage = 12 ❌ 同样，你可以在一行中定义多个变量，最后一个变量名后面添加类型注解：
+var yellow, green, blue: Double  ⚠️正常情况下很少需要类型注解，Swift可以推断出这个，除非在明确要限制变量类型的情况下，一般不需要添加
+ 常量和变量的命名 常量和变量名可以包含任何字符，包括 Unicode 字符：常量和变量名可以包含任何字符，包括 Unicode 字符：</description>
+            <content type="html"><![CDATA[<h1 id="常量和变量">常量和变量</h1>
 <p>常量声明<code>let</code></p>
 <p>变量声明<code>var</code></p>
 <p>例如：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">maximumNumberOfLoginAttempts</span> <span class="p">=</span> <span class="mi">10</span>
-<span class="kd">var</span> <span class="nv">currentLoginAttempt</span> <span class="p">=</span> <span class="mi">0</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> maximumNumberOfLoginAttempts = <span style="color:#ae81ff">10</span>
+<span style="color:#66d9ef">var</span> currentLoginAttempt = <span style="color:#ae81ff">0</span>
 </code></pre></div><p>可以在一行中声明多个变量，类似C</p>
 <p>例如：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">var</span> <span class="nv">a</span> <span class="p">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">b</span> <span class="p">=</span> <span class="mi">2</span> <span class="p">,</span> <span class="n">c</span> <span class="p">=</span> <span class="mi">3</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">var</span> a = <span style="color:#ae81ff">1</span> , b = <span style="color:#ae81ff">2</span> , c = <span style="color:#ae81ff">3</span>
 </code></pre></div><blockquote>
 <p>⚠️一般不变的值用常量<code>let</code>,<code>var</code>只声明会变化的值，防止出错</p>
 </blockquote>
@@ -282,35 +309,35 @@
 <p>类型注解是声明常量或者变量的时候，说明常量或者变量中要存储的值的类型。</p>
 <p>如果要添加类型注解，需要在常量或者变量名后面加上一个冒号和空格，然后加上类型名称。</p>
 <p>例如：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">var</span> <span class="nv">welcomeMessage</span><span class="p">:</span> <span class="nb">String</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">var</span> welcomeMessage: String
 
-<span class="c1">//说明 在此声明的 welcomeMessage 只能为String类型</span>
-<span class="c1">//welcomeMessage 可以设置为任意字符串</span>
+<span style="color:#75715e">//说明 在此声明的 welcomeMessage 只能为String类型</span>
+<span style="color:#75715e">//welcomeMessage 可以设置为任意字符串</span>
 
-<span class="n">welcomeMessage</span> <span class="p">=</span> <span class="s">&#34;Hello world&#34;</span> <span class="err">✔️</span>
-<span class="n">welcomeMessage</span> <span class="p">=</span> <span class="s">&#34;12&#34;</span> <span class="err">✔️</span>
-<span class="n">welcomeMessage</span> <span class="p">=</span> <span class="mi">12</span> <span class="err">❌</span>
+welcomeMessage = <span style="color:#e6db74">&#34;Hello world&#34;</span> <span style="color:#960050;background-color:#1e0010">✔️</span>
+welcomeMessage = <span style="color:#e6db74">&#34;12&#34;</span> <span style="color:#960050;background-color:#1e0010">✔️</span>
+welcomeMessage = <span style="color:#ae81ff">12</span> <span style="color:#960050;background-color:#1e0010">❌</span>
 </code></pre></div><p>同样，你可以在一行中定义多个变量，最后一个变量名后面添加类型注解：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">var</span> <span class="nv">yellow</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="n">blue</span><span class="p">:</span> <span class="nb">Double</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">var</span> yellow, green, blue: Double
 </code></pre></div><blockquote>
 <p>⚠️正常情况下很少需要类型注解，Swift可以推断出这个，除非在明确要限制变量类型的情况下，一般不需要添加</p>
 </blockquote>
 <h2 id="常量和变量的命名">常量和变量的命名</h2>
 <p>常量和变量名可以包含任何字符，包括 Unicode 字符：常量和变量名可以包含任何字符，包括 Unicode 字符：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="err">π</span> <span class="p">=</span> <span class="mf">3.14159</span>
-<span class="kd">let</span> <span class="err">你好</span> <span class="p">=</span> <span class="s">&#34;你好世界&#34;</span>
-<span class="kd">let</span> <span class="err">🐶🐮</span> <span class="p">=</span> <span class="s">&#34;dogcow&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> <span style="color:#960050;background-color:#1e0010">π</span> = <span style="color:#ae81ff">3.14159</span>
+<span style="color:#66d9ef">let</span> <span style="color:#960050;background-color:#1e0010">你好</span> = <span style="color:#e6db74">&#34;你好世界&#34;</span>
+<span style="color:#66d9ef">let</span> <span style="color:#960050;background-color:#1e0010">🐶🐮</span> = <span style="color:#e6db74">&#34;dogcow&#34;</span>
 </code></pre></div><blockquote>
 <p>⚠️与变量不同，常量的值一旦被确定就不能更改了。如下所示，会导致编译出错。</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">languageName</span> <span class="p">=</span> <span class="s">&#34;Swift&#34;</span>
-<span class="n">languageName</span> <span class="p">=</span> <span class="s">&#34;Swift++&#34;</span>
-<span class="c1">// 这会报编译时错误 - languageName 不可改变</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> languageName = <span style="color:#e6db74">&#34;Swift&#34;</span>
+languageName = <span style="color:#e6db74">&#34;Swift++&#34;</span>
+<span style="color:#75715e">// 这会报编译时错误 - languageName 不可改变</span>
 </code></pre></div></blockquote>
 <h2 id="输出常量和变量">输出常量和变量</h2>
 <p>输出的语法跟C语言基本一致</p>
 <p>Swift中，占位符为 <code>反斜杠+(常量名/变量名)</code>，例如<code>\(friendlyname)</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">var</span> <span class="nv">friendlyname</span> <span class="p">=</span> <span class="s">&#34;电视机&#34;</span>
-<span class="bp">print</span> <span class="p">(</span><span class="s">&#34;The current value of friendlyname is </span><span class="si">\(</span><span class="n">friendlyname</span><span class="si">)</span><span class="s">&#34;</span><span class="p">)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">var</span> friendlyname = <span style="color:#e6db74">&#34;电视机&#34;</span>
+print (<span style="color:#e6db74">&#34;The current value of friendlyname is </span><span style="color:#e6db74">\(</span>friendlyname<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
 </code></pre></div><h1 id="数据类型">数据类型</h1>
 <h2 id="整数">整数</h2>
 <p>整数就是没有小数部分的数字，比如 <code>42</code> 和 <code>-23</code> 。整数可以是 <code>有符号</code>（正、负、零）或者 <code>无符号</code>（正、零）。</p>
@@ -344,15 +371,15 @@
 <p>##类型安全和类型推断</p>
 <p>Swift 是一个*类型安全（type safe）*的语言。类型安全的语言可以让你清楚地知道代码要处理的值的类型。如果你的代码需要一个 <code>String</code>，你绝对不可能不小心传进去一个 <code>Int</code>。</p>
 <p>例如，如果你给一个新常量赋值 <code>42</code> 并且没有标明类型，Swift 可以推断出常量类型是 <code>Int</code> ，因为你给它赋的初始值看起来像一个整数：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">meaningOfLife</span> <span class="p">=</span> <span class="mi">42</span>
-<span class="c1">// meaningOfLife 会被推测为 Int 类型</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> meaningOfLife = <span style="color:#ae81ff">42</span>
+<span style="color:#75715e">// meaningOfLife 会被推测为 Int 类型</span>
 </code></pre></div><p>同理，如果你没有给浮点字面量标明类型，Swift 会推断你想要的是 <code>Double</code>：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">pi</span> <span class="p">=</span> <span class="mf">3.14159</span>
-<span class="c1">// pi 会被推测为 Double 类型</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> pi = <span style="color:#ae81ff">3.14159</span>
+<span style="color:#75715e">// pi 会被推测为 Double 类型</span>
 </code></pre></div><p>当推断浮点数的类型时，Swift 总是会选择 <code>Double</code> 而不是 <code>Float</code>。</p>
 <p>如果表达式中同时出现了整数和浮点数，会被推断为 <code>Double</code> 类型：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">anotherPi</span> <span class="p">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mf">0.14159</span>
-<span class="c1">// anotherPi 会被推测为 Double 类型</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> anotherPi = <span style="color:#ae81ff">3</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.14159</span>
+<span style="color:#75715e">// anotherPi 会被推测为 Double 类型</span>
 </code></pre></div><p>原始值 <code>3</code> 没有显式声明类型，而表达式中出现了一个浮点字面量，所以表达式会被推断为 <code>Double</code> 类型。</p>
 <h2 id="数值型字面量">数值型字面量</h2>
 <h3 id="整数字面量">整数字面量</h3>
@@ -364,10 +391,10 @@
 <li>一个<em>十六进制</em>数，前缀是 <code>0x</code></li>
 </ul>
 <p>例如下面的所有整数字面量的十进制值都是 <code>17</code>:</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">decimalInteger</span> <span class="p">=</span> <span class="mi">17</span>
-<span class="kd">let</span> <span class="nv">binaryInteger</span> <span class="p">=</span> <span class="mb">0b10001</span>       <span class="c1">// 二进制的17</span>
-<span class="kd">let</span> <span class="nv">octalInteger</span> <span class="p">=</span> <span class="mo">0o21</span>           <span class="c1">// 八进制的17</span>
-<span class="kd">let</span> <span class="nv">hexadecimalInteger</span> <span class="p">=</span> <span class="mh">0x11</span>     <span class="c1">// 十六进制的17</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> decimalInteger = <span style="color:#ae81ff">17</span>
+<span style="color:#66d9ef">let</span> binaryInteger = <span style="color:#ae81ff">0b10001</span>       <span style="color:#75715e">// 二进制的17</span>
+<span style="color:#66d9ef">let</span> octalInteger = <span style="color:#ae81ff">0o21</span>           <span style="color:#75715e">// 八进制的17</span>
+<span style="color:#66d9ef">let</span> hexadecimalInteger = <span style="color:#ae81ff">0x11</span>     <span style="color:#75715e">// 十六进制的17</span>
 </code></pre></div><h3 id="浮点字面量">浮点字面量</h3>
 <p>浮点字面量可以是十进制（没有前缀）或者是十六进制（前缀是 <code>0x</code> ）。小数点两边必须有至少一个十进制数字（或者是十六进制的数字）。</p>
 <p>十进制浮点数也可以有一个可选的指数（exponent)，通过大写或者小写的 <code>e</code> 来指定；十六进制浮点数必须有一个指数，通过大写或者小写的 <code>p</code> 来指定。</p>
@@ -382,53 +409,53 @@
 <li><code>0xFp-2</code> 表示 15 × 2^-2，等于 <code>3.75</code>。</li>
 </ul>
 <p>下面的这些浮点字面量都等于十进制的 <code>12.1875</code>：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">decimalDouble</span> <span class="p">=</span> <span class="mf">12.1875</span>
-<span class="kd">let</span> <span class="nv">exponentDouble</span> <span class="p">=</span> <span class="mf">1.21875e1</span>
-<span class="kd">let</span> <span class="nv">hexadecimalDouble</span> <span class="p">=</span> <span class="mh">0xC</span><span class="p">.</span><span class="mi">3</span><span class="n">p0</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> decimalDouble = <span style="color:#ae81ff">12.1875</span>
+<span style="color:#66d9ef">let</span> exponentDouble = <span style="color:#ae81ff">1.21875e1</span>
+<span style="color:#66d9ef">let</span> hexadecimalDouble = <span style="color:#ae81ff">0xC</span>.<span style="color:#ae81ff">3</span>p0
 </code></pre></div><blockquote>
 <p>整数和浮点数都可以添加额外的零并且包含下划线，并不会影响字面量：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">paddedDouble</span> <span class="p">=</span> <span class="mf">000123.456</span>
-<span class="kd">let</span> <span class="nv">oneMillion</span> <span class="p">=</span> <span class="mi">1_000_000</span>
-<span class="kd">let</span> <span class="nv">justOverOneMillion</span> <span class="p">=</span> <span class="mf">1_000_000.000_000_1</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> paddedDouble = <span style="color:#ae81ff">000123.456</span>
+<span style="color:#66d9ef">let</span> oneMillion = <span style="color:#ae81ff">1_000_000</span>
+<span style="color:#66d9ef">let</span> justOverOneMillion = <span style="color:#ae81ff">1_000_000.000_000_1</span>
 </code></pre></div></blockquote>
 <h2 id="数值类型转换">数值类型转换</h2>
 <h3 id="整数和浮点数转换">整数和浮点数转换</h3>
 <p>整数和浮点数的转换必须显式指定类型：</p>
 <p>例如：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">three</span> <span class="p">=</span> <span class="mi">3</span>
-<span class="kd">let</span> <span class="nv">pointOneFourOneFiveNine</span> <span class="p">=</span> <span class="mf">0.14159</span>
-<span class="kd">let</span> <span class="nv">pi</span> <span class="p">=</span> <span class="nb">Double</span><span class="p">(</span><span class="n">three</span><span class="p">)</span> <span class="o">+</span> <span class="n">pointOneFourOneFiveNine</span>
-<span class="c1">// pi 等于 3.14159，所以被推测为 Double 类型</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> three = <span style="color:#ae81ff">3</span>
+<span style="color:#66d9ef">let</span> pointOneFourOneFiveNine = <span style="color:#ae81ff">0.14159</span>
+<span style="color:#66d9ef">let</span> pi = Double(three) <span style="color:#f92672">+</span> pointOneFourOneFiveNine
+<span style="color:#75715e">// pi 等于 3.14159，所以被推测为 Double 类型</span>
 </code></pre></div><p>这个例子中，常量 three 的值被用来创建一个 Double 类型的值，所以加号两边的数类型须相同。如果不进行转换，两者无法相加。</p>
 <p>浮点数到整数的反向转换同样行，整数类型可以用 <code>Double</code> 或者 <code>Float</code> 类型来初始化：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">integerPi</span> <span class="p">=</span> <span class="nb">Int</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
-<span class="c1">// integerPi 等于 3，所以被推测为 Int 类型</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> integerPi = Int(pi)
+<span style="color:#75715e">// integerPi 等于 3，所以被推测为 Int 类型</span>
 
-<span class="kd">let</span> <span class="nv">c</span> <span class="p">=</span> <span class="mf">231.3214353453</span>
-<span class="kd">let</span> <span class="nv">cc</span> <span class="p">=</span> <span class="nb">Int</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-<span class="c1">// cc = 231 ，说明重要的在Int上面</span>
+<span style="color:#66d9ef">let</span> c = <span style="color:#ae81ff">231.3214353453</span>
+<span style="color:#66d9ef">let</span> cc = Int(c)
+<span style="color:#75715e">// cc = 231 ，说明重要的在Int上面</span>
 </code></pre></div><h2 id="布尔值">布尔值</h2>
 <p>Swift 有一个基本的<em>布尔（Boolean）类型</em>，叫做 <code>Bool</code>。布尔值指<em>逻辑</em>上的值，因为它们只能是真或者假。Swift 有两个布尔常量，<code>true</code> 和 <code>false</code>：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">orangesAreOrange</span> <span class="p">=</span> <span class="kc">true</span>
-<span class="kd">let</span> <span class="nv">turnipsAreDelicious</span> <span class="p">=</span> <span class="kc">false</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> orangesAreOrange = <span style="color:#66d9ef">true</span>
+<span style="color:#66d9ef">let</span> turnipsAreDelicious = <span style="color:#66d9ef">false</span>
 </code></pre></div><p>就像之前提到的 <code>Int</code> 和 <code>Double</code> 一样，如果你创建变量的时候给它们赋值 <code>true</code> 或者 <code>false</code>，那你不需要将常量或者变量声明为 <code>Bool</code> 类型。</p>
 <p>当你编写条件语句比如 <code>if</code> 语句的时候，布尔值非常有用：</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="k">if</span> <span class="n">turnipsAreDelicious</span> <span class="p">{</span>
-    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Mmm, tasty turnips!&#34;</span><span class="p">)</span>    <span class="c1">// 当 turnipsAreDelicious 为 true</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="bp">print</span><span class="p">(</span><span class="s">&#34;Eww, turnips are horrible.&#34;</span><span class="p">)</span>  <span class="c1">// 当 turnipsAreDelicious 为 false</span>
-<span class="p">}</span>
-<span class="c1">// 输出“Eww, turnips are horrible.”</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">if</span> turnipsAreDelicious {
+    print(<span style="color:#e6db74">&#34;Mmm, tasty turnips!&#34;</span>)    <span style="color:#75715e">// 当 turnipsAreDelicious 为 true</span>
+} <span style="color:#66d9ef">else</span> {
+    print(<span style="color:#e6db74">&#34;Eww, turnips are horrible.&#34;</span>)  <span style="color:#75715e">// 当 turnipsAreDelicious 为 false</span>
+}
+<span style="color:#75715e">// 输出“Eww, turnips are horrible.”</span>
 </code></pre></div><p>可见，在if中使用布尔值，首先判断true，其次是false。</p>
 <h2 id="元组">元组</h2>
 <p>**元组（tuples）**把多个值组合成一个复合值。元组内的值可以是任意类型，并不要求是相同类型。</p>
 <p>下面这个例子中，(404, &ldquo;Not Found&rdquo;) 是一个描述 HTTP 状态码（HTTP status code）的元组。HTTP 状态码是当你请求网页的时候 web 服务器返回的一个特殊值。如果你请求的网页不存在就会返回一个 404 Not Found 状态码。</p>
-<div class="highlight"><pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">http404Error</span> <span class="p">=</span> <span class="p">(</span><span class="mi">404</span><span class="p">,</span> <span class="s">&#34;Not Found&#34;</span><span class="p">)</span>
-<span class="c1">// http404Error 的类型是 (Int, String)，值是 (404, &#34;Not Found&#34;)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> http404Error = (<span style="color:#ae81ff">404</span>, <span style="color:#e6db74">&#34;Not Found&#34;</span>)
+<span style="color:#75715e">// http404Error 的类型是 (Int, String)，值是 (404, &#34;Not Found&#34;)</span>
 </code></pre></div><p>(404, &ldquo;Not Found&rdquo;) 元组把一个 Int 值和一个 String 值组合起来表示 HTTP 状态码的两个部分：一个数字和一个人类可读的描述。这个元组可以被描述为“一个类型为 (Int, String) 的元组”。</p>
 <p>你可以把任意顺序的类型组合成一个元组，这个元组可以包含所有类型。只要你想，你可以创建一个类型为 <code>(Int, Int, Int)</code> 或者 <code>(String, Bool)</code> 或者其他任何你想要的组合的元组。</p>
 ]]></content>
-		</item>
-		
-	</channel>
+        </item>
+        
+    </channel>
 </rss>

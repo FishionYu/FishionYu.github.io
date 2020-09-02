@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Develop on 萨雷斯煜</title>
+    <title>Develop on 萨雷斯煜のDev Note</title>
     <link>https://dev.hanry.top/tags/develop/</link>
-    <description>Recent content in Develop on 萨雷斯煜</description>
+    <description>Recent content in Develop on 萨雷斯煜のDev Note</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://dev.hanry.top/tags/develop/index.xml" rel="self" type="application/rss+xml" />
@@ -14,20 +14,35 @@
     
     <item>
       <title>Switft5.1基础运算符</title>
-      <link>https://dev.hanry.top/posts/swift5.1%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+      <link>https://dev.hanry.top/posts/2020/09/switft5.1%E5%9F%BA%E7%A1%80%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dev.hanry.top/posts/swift5.1%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
-      <description>术语 运算符分为一元、二元和三元运算符： 一元运算符是对单一对象操作（例如+a, !b, c!） 二元运算符是对两个对象操作（例如a + b, a - b） 三元运算符</description>
+      <guid>https://dev.hanry.top/posts/2020/09/switft5.1%E5%9F%BA%E7%A1%80%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
+      <description>术语 运算符分为一元、二元和三元运算符：
+ 一元运算符是对单一对象操作（例如+a, !b, c!） 二元运算符是对两个对象操作（例如a + b, a - b） 三元运算符是对三个对象操作，swift中只有一个就是a ? b : c   三元运算符意思是问题 ? 答案 1 : 答案 2，后文会讲到
+ 赋值运算符 赋值运算符（a = b），表示用 b 的值来初始化或更新 a 的值：
+let b = 10 var a = 5 a = b // a 现在等于 10 let (x, y) = (1, 2) // 现在 x 等于 1，y 等于 2 算数运算符 + - × ÷，大家都懂
+求余运算符 a &amp;amp; b 计算 b的多少倍刚刚好可以容入a，返回来多的数。</description>
     </item>
     
     <item>
       <title>Switft5.1基础笔记</title>
-      <link>https://dev.hanry.top/posts/swift5.1%E5%9F%BA%E7%A1%80/</link>
+      <link>https://dev.hanry.top/posts/2020/08/switft5.1%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dev.hanry.top/posts/swift5.1%E5%9F%BA%E7%A1%80/</guid>
-      <description>常量和变量 常量声明let 变量声明var 例如： let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0 可以在一行中声明多个变量，类似C 例如： var a = 1 , b = 2 , c = 3 ⚠️一般不变的值用</description>
+      <guid>https://dev.hanry.top/posts/2020/08/switft5.1%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</guid>
+      <description>常量和变量 常量声明let
+变量声明var
+例如：
+let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0 可以在一行中声明多个变量，类似C
+例如：
+var a = 1 , b = 2 , c = 3  ⚠️一般不变的值用常量let,var只声明会变化的值，防止出错
+ 类型注解 类型注解是声明常量或者变量的时候，说明常量或者变量中要存储的值的类型。
+如果要添加类型注解，需要在常量或者变量名后面加上一个冒号和空格，然后加上类型名称。
+例如：
+var welcomeMessage: String //说明 在此声明的 welcomeMessage 只能为String类型 //welcomeMessage 可以设置为任意字符串 welcomeMessage = &amp;#34;Hello world&amp;#34; ✔️ welcomeMessage = &amp;#34;12&amp;#34; ✔️ welcomeMessage = 12 ❌ 同样，你可以在一行中定义多个变量，最后一个变量名后面添加类型注解：
+var yellow, green, blue: Double  ⚠️正常情况下很少需要类型注解，Swift可以推断出这个，除非在明确要限制变量类型的情况下，一般不需要添加
+ 常量和变量的命名 常量和变量名可以包含任何字符，包括 Unicode 字符：常量和变量名可以包含任何字符，包括 Unicode 字符：</description>
     </item>
     
   </channel>
