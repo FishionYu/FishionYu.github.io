@@ -3,11 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://dev.hanry.top/tags/develop/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev.hanry.top/posts/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev.hanry.top/tags/swift/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev.hanry.top/posts/swift5.1%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://dev.hanry.top/tags/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://dev.hanry.top/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev.hanry.top/posts/switft5.1%E5%87%BD%E6%95%B0/</loc>
+    <lastmod>2020-08-29T11:39:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev.hanry.top/posts/swift5.1%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>

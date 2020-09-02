@@ -7,9 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://dev.hanry.top/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Switft5.1基础运算符</title>
+      <link>https://dev.hanry.top/posts/swift5.1%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev.hanry.top/posts/swift5.1%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
+      <description>术语 运算符分为一元、二元和三元运算符： 一元运算符是对单一对象操作（例如+a, !b, c!） 二元运算符是对两个对象操作（例如a + b, a - b） 三元运算符</description>
+    </item>
+    
+    <item>
+      <title>Switft5.1函数笔记</title>
+      <link>https://dev.hanry.top/posts/switft5.1%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Sat, 29 Aug 2020 11:39:00 +0800</pubDate>
+      
+      <guid>https://dev.hanry.top/posts/switft5.1%E5%87%BD%E6%95%B0/</guid>
+      <description>[toc] 函数本质是什么 函数本质是用来复用一段代码 如何定义函数 函数定义使用func，以 func 作为前缀。指定函数返回类型时，用返回箭头 -&amp;gt;（一个连字</description>
+    </item>
+    
+    <item>
+      <title>Switft5.1基础笔记</title>
+      <link>https://dev.hanry.top/posts/swift5.1%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev.hanry.top/posts/swift5.1%E5%9F%BA%E7%A1%80/</guid>
+      <description>常量和变量 常量声明let 变量声明var 例如： let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0 可以在一行中声明多个变量，类似C 例如： var a = 1 , b = 2 , c = 3 ⚠️一般不变的值用</description>
+    </item>
     
   </channel>
 </rss>
