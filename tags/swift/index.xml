@@ -13,26 +13,12 @@
     
     
     <item>
-      <title>Switft5.1基础运算符</title>
-      <link>https://dev.hanry.top/posts/2020/09/switft5.1%E5%9F%BA%E7%A1%80%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+      <title>Switft5.1函数笔记</title>
+      <link>https://dev.hanry.top/posts/2020/09/switft5.1%E5%87%BD%E6%95%B0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dev.hanry.top/posts/2020/09/switft5.1%E5%9F%BA%E7%A1%80%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
-      <description>术语 运算符分为一元、二元和三元运算符：
- 一元运算符是对单一对象操作（例如+a, !b, c!） 二元运算符是对两个对象操作（例如a + b, a - b） 三元运算符是对三个对象操作，swift中只有一个就是a ? b : c   三元运算符意思是问题 ? 答案 1 : 答案 2，后文会讲到
- 赋值运算符 赋值运算符（a = b），表示用 b 的值来初始化或更新 a 的值：
-let b = 10 var a = 5 a = b // a 现在等于 10 let (x, y) = (1, 2) // 现在 x 等于 1，y 等于 2 算数运算符 + - × ÷，大家都懂
-求余运算符 a &amp;amp; b 计算 b的多少倍刚刚好可以容入a，返回来多的数。</description>
-    </item>
-    
-    <item>
-      <title>Switft5.1函数笔记</title>
-      <link>https://dev.hanry.top/posts/2020/08/switft5.1%E5%87%BD%E6%95%B0%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Sat, 29 Aug 2020 11:39:00 +0800</pubDate>
-      
-      <guid>https://dev.hanry.top/posts/2020/08/switft5.1%E5%87%BD%E6%95%B0%E7%AC%94%E8%AE%B0/</guid>
-      <description>[toc]
-函数本质是什么 函数本质是用来复用一段代码
+      <guid>https://dev.hanry.top/posts/2020/09/switft5.1%E5%87%BD%E6%95%B0%E7%AC%94%E8%AE%B0/</guid>
+      <description>函数本质是什么 函数本质是用来复用一段代码
 如何定义函数 函数定义使用func，以 func 作为前缀。指定函数返回类型时，用返回箭头 -&amp;gt;（一个连字符后跟一个右尖括号）后跟返回类型的名称的方式来表示。
 基本语法是:
 func name(lastname: String, firstname: String) -&amp;gt; String{ ... } 意思是：
@@ -44,6 +30,19 @@ func sayHelloWorld() -&amp;gt; String { return &amp;#34;hello, world&amp;#34; } 
 如何指定参数标签 在参数名称前指定它的参数标签，中间以空格分隔
 例如：
 func gotowork(at time: String) { //at就是参数标签，time就是参数名称 print(&amp;#34;this time is \(time)&amp;#34;) } gotowork(at: &amp;#34;8:00&amp;#34;) // 输出this time is 8:00 //有了参数标签，有时会让代码更易读 调用函数读起来go to work at 8:00  调用函数的参数也是可以没有标签的，只需要在函数中定义参数时前面加一个_，即可忽略参数标签</description>
+    </item>
+    
+    <item>
+      <title>Switft5.1基础运算符</title>
+      <link>https://dev.hanry.top/posts/2020/08/switft5.1%E5%9F%BA%E7%A1%80%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+      <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dev.hanry.top/posts/2020/08/switft5.1%E5%9F%BA%E7%A1%80%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
+      <description>术语 运算符分为一元、二元和三元运算符：
+ 一元运算符是对单一对象操作（例如+a, !b, c!） 二元运算符是对两个对象操作（例如a + b, a - b） 三元运算符是对三个对象操作，swift中只有一个就是a ? b : c   三元运算符意思是问题 ? 答案 1 : 答案 2，后文会讲到
+ 赋值运算符 赋值运算符（a = b），表示用 b 的值来初始化或更新 a 的值：
+let b = 10 var a = 5 a = b // a 现在等于 10 let (x, y) = (1, 2) // 现在 x 等于 1，y 等于 2 算数运算符 + - × ÷，大家都懂
+求余运算符 a &amp;amp; b 计算 b的多少倍刚刚好可以容入a，返回来多的数。</description>
     </item>
     
     <item>

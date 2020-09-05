@@ -10,11 +10,162 @@
         <atom:link href="https://dev.hanry.top/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>Switft5.1基础运算符</title>
-            <link>https://dev.hanry.top/posts/2020/09/switft5.1%E5%9F%BA%E7%A1%80%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+            <title>Switft5.1函数笔记</title>
+            <link>https://dev.hanry.top/posts/2020/09/switft5.1%E5%87%BD%E6%95%B0%E7%AC%94%E8%AE%B0/</link>
             <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://dev.hanry.top/posts/2020/09/switft5.1%E5%9F%BA%E7%A1%80%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
+            <guid>https://dev.hanry.top/posts/2020/09/switft5.1%E5%87%BD%E6%95%B0%E7%AC%94%E8%AE%B0/</guid>
+            <description>函数本质是什么 函数本质是用来复用一段代码
+如何定义函数 函数定义使用func，以 func 作为前缀。指定函数返回类型时，用返回箭头 -&amp;gt;（一个连字符后跟一个右尖括号）后跟返回类型的名称的方式来表示。
+基本语法是:
+func name(lastname: String, firstname: String) -&amp;gt; String{ ... } 意思是：
+func 函数名(参数一: 类型, 参数二: 类型, 以此类推) -&amp;gt; 返回值类型 { ... } 参数 参数的定义需要有名字和类型
+无参数函数 函数是可以没有参数的，当函数没有参数时，在函数名后还是需要一对圆括号。当被调用时，也需要在函数名后写一对圆括号。
+例如：
+func sayHelloWorld() -&amp;gt; String { return &amp;#34;hello, world&amp;#34; } print(sayHelloWorld()) // 打印“hello, world” 参数标签 每个函数参数都有一个参数标签（argument label）以及一个参数名称（parameter name），参数标签本质上是指向参数名称的。
+默认情况下，函数参数使用参数名称来作为它们的参数标签。
+如何指定参数标签 在参数名称前指定它的参数标签，中间以空格分隔
+例如：
+func gotowork(at time: String) { //at就是参数标签，time就是参数名称 print(&amp;#34;this time is \(time)&amp;#34;) } gotowork(at: &amp;#34;8:00&amp;#34;) // 输出this time is 8:00 //有了参数标签，有时会让代码更易读 调用函数读起来go to work at 8:00  调用函数的参数也是可以没有标签的，只需要在函数中定义参数时前面加一个_，即可忽略参数标签</description>
+            <content type="html"><![CDATA[<h1 id="函数本质是什么">函数本质是什么</h1>
+<p>函数本质是用来复用一段代码</p>
+<h2 id="如何定义函数">如何定义函数</h2>
+<p>函数定义使用func，以 <code>func</code> 作为前缀。指定函数返回类型时，用返回箭头 <code>-&gt;</code>（一个连字符后跟一个右尖括号）后跟返回类型的名称的方式来表示。</p>
+<p>基本语法是:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">name</span>(lastname: String, firstname: String) -&gt; String{
+  ...
+}
+</code></pre></div><p>意思是：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#960050;background-color:#1e0010">函数名</span>(<span style="color:#960050;background-color:#1e0010">参数一</span>: <span style="color:#960050;background-color:#1e0010">类型</span>, <span style="color:#960050;background-color:#1e0010">参数二</span>: <span style="color:#960050;background-color:#1e0010">类型</span>, <span style="color:#960050;background-color:#1e0010">以此类推</span>) -&gt; <span style="color:#960050;background-color:#1e0010">返回值类型</span> {
+  ...
+}
+</code></pre></div><h2 id="参数">参数</h2>
+<p>参数的定义需要有名字和类型</p>
+<h3 id="无参数函数">无参数函数</h3>
+<p>函数是可以没有参数的，当函数没有参数时，在函数名后还是需要一对圆括号。当被调用时，也需要在函数名后写一对圆括号。</p>
+<p>例如：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">sayHelloWorld</span>() -&gt; String {
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;hello, world&#34;</span>
+}
+print(sayHelloWorld())
+<span style="color:#75715e">// 打印“hello, world”</span>
+</code></pre></div><h3 id="参数标签">参数标签</h3>
+<p>每个函数参数都有一个<em>参数标签（argument label）<em>以及一个</em>参数名称（parameter name）</em>，参数标签本质上是指向参数名称的。</p>
+<p><strong>默认情况下，函数参数使用参数名称来作为它们的参数标签。</strong></p>
+<h4 id="如何指定参数标签">如何指定参数标签</h4>
+<p>在参数名称前指定它的参数标签，中间以空格分隔</p>
+<p>例如：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">gotowork</span>(at time: String) { <span style="color:#75715e">//at就是参数标签，time就是参数名称</span>
+  	print(<span style="color:#e6db74">&#34;this time is </span><span style="color:#e6db74">\(</span>time<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+}
+gotowork(at: <span style="color:#e6db74">&#34;8:00&#34;</span>) <span style="color:#75715e">// 输出this time is 8:00</span>
+<span style="color:#75715e">//有了参数标签，有时会让代码更易读  调用函数读起来go to work at 8:00</span>
+</code></pre></div><blockquote>
+<p>调用函数的参数也是可以没有标签的，只需要在函数中定义参数时前面加一个_，即可忽略参数标签</p>
+<p>例如<code>func sayHelloWorld(_ sentence: string) { ... }</code></p>
+<p>调用时直接写<code>sayHelloWorld(&quot;hello world&quot;)</code></p>
+<p>而不必写<code>sayHellowWorld(sentence: &quot;hello world&quot;)</code></p>
+</blockquote>
+<h3 id="默认参数值">默认参数值</h3>
+<p>参数值在定义时可以默认给一个值。当默认值被定义后，调用这个函数时可以忽略这个参数。</p>
+<p><code>Func 函数名(参数名1: 参数类型1 = 默认值1，参数名2: 参数类型2 = 默认值2 )</code></p>
+<p>例如：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">check</span>(name: String = <span style="color:#e6db74">&#34;none&#34;</span>, age: Int = <span style="color:#ae81ff">1</span>, job: String) { <span style="color:#75715e">//name默认是none，age默认是1</span>
+    print(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">\(</span>name<span style="color:#e6db74">)</span><span style="color:#e6db74">,</span><span style="color:#e6db74">\(</span>age<span style="color:#e6db74">)</span><span style="color:#e6db74">,</span><span style="color:#e6db74">\(</span>job<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+}
+
+check(name: <span style="color:#e6db74">&#34;joy&#34;</span>, age: <span style="color:#ae81ff">18</span>, job: <span style="color:#e6db74">&#34;develop&#34;</span>) <span style="color:#75715e">//joy 18 develop</span>
+check(age: <span style="color:#ae81ff">1</span>, job: <span style="color:#e6db74">&#34;student&#34;</span>)  <span style="color:#75715e">//none 1 student</span>
+</code></pre></div><h3 id="可变参数">可变参数</h3>
+<p>通过在变量类型名后面加入（<code>...</code>）的方式来定义可变参数。</p>
+<p>可变参数的传入值在函数体中变为此类型的一个数组。例如，一个叫做 <code>numbers</code> 的 <code>Double...</code> 型可变参数，在函数体内可以当做一个叫 <code>numbers</code> 的 <code>[Double]</code> 型的数组常量。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">arithmeticMean</span>(<span style="color:#66d9ef">_</span> numbers: Double...) -&gt; Double {
+    <span style="color:#66d9ef">var</span> total: Double = <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> number <span style="color:#66d9ef">in</span> numbers {
+        total <span style="color:#f92672">+=</span> number
+    }
+    <span style="color:#66d9ef">return</span> total <span style="color:#f92672">/</span> Double(numbers.count)
+}
+arithmeticMean(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>)  <span style="color:#75715e">//相当于number变成了一个数组[1,2,3,4,5]</span>
+<span style="color:#75715e">// 返回 3.0, 是这 5 个数的平均数。</span>
+arithmeticMean(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">8.25</span>, <span style="color:#ae81ff">18.75</span>)
+<span style="color:#75715e">// 返回 10.0, 是这 3 个数的平均数。</span>
+</code></pre></div><blockquote>
+<p>需要注意的是：</p>
+<ol>
+<li>一个函数里面最多只能有一个可变参数</li>
+<li>紧跟在可变参数后面的参数不能省略参数标签</li>
+</ol>
+<p>🉑 ​<code> func sum(name: String..., age: Int)</code></p>
+<p>🚫 <code>func sum(name: String..., _ age: Int)</code></p>
+</blockquote>
+<h3 id="输入输出函数">输入输出函数⚠️</h3>
+<p>函数参数默认是常量。试图在函数体中更改参数值将会导致编译错误。</p>
+<p>如果你想要一个函数可以修改参数的值，并且想要在这些修改在函数调用结束后仍然存在，那么就应该把这个参数定义为<em><strong>输入输出参数（In-Out Parameters）</strong></em>。</p>
+<p>定义一个输入输出参数时，在参数定义前加 <code>inout</code> 关键字。</p>
+<p>你只能传递变量给输入输出参数。你不能传入常量或者字面量，因为这些量是不能被修改的。当传入的参数作为输入输出参数时，需要在参数名前加 <code>&amp;</code> 符，表示这个值可以被函数修改。</p>
+<blockquote>
+<p>简单理解，就是假如有一个<code>func sum(name: inout String, age: inout Int){...}</code>，在外部调用函数时，<code>sum(name: ray, age: 18)</code>，其中的<code>ray</code>和<code>18</code>有可能会被函数改变</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">//示例代码，快速搞懂</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">sum</span>(v1: <span style="color:#66d9ef">inout</span> Int, v2: <span style="color:#66d9ef">inout</span> Int) {  <span style="color:#75715e">//这是一个输入输出函数</span>
+    <span style="color:#66d9ef">let</span> copy = v1
+    v1 = v1 <span style="color:#f92672">+</span> v2
+    v2 = copy <span style="color:#f92672">-</span> v2
+}
+
+<span style="color:#66d9ef">var</span> num1 = <span style="color:#ae81ff">1</span> <span style="color:#75715e">//看啊，num1是1</span>
+<span style="color:#66d9ef">var</span> num2 = <span style="color:#ae81ff">4</span> <span style="color:#75715e">//看啊，num2是4</span>
+
+print(num1, num2) <span style="color:#75715e">//打印出来的确是 1 4</span>
+
+sum(v1: &amp;num1, v2: &amp;num2) <span style="color:#75715e">//调用函数sum</span>
+print(num1, num2) <span style="color:#75715e">//打印出来就是5 -3，现在num1就是1+5=5， num2就是1-4=-3</span>
+<span style="color:#75715e">//那我在调用一次呢</span>
+sum(v1: &amp;num1, v2: &amp;num2) <span style="color:#75715e">//再次调用函数sum</span>
+print(num1, num2) <span style="color:#75715e">//打印出来就是2 8，现在num1就是5+(-3)=2， num2就是5-(-3)=8</span>
+</code></pre></div></blockquote>
+<h2 id="返回值">返回值</h2>
+<p>函数里面一般是有返回值<code>return</code></p>
+<p>如果需要无返回值</p>
+<h3 id="无返回值函数">无返回值函数</h3>
+<p>函数可以没有返回值。</p>
+<p>因为这个函数不需要返回值，所以这个函数的定义中没有返回箭头（-&gt;）和返回类型。</p>
+<p>下面是 <code>greet(person:)</code> 函数的另一个版本，这个函数直接打印一个 <code>String</code> 值，而不是返回它：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">greet</span>(person: String) {
+    print(<span style="color:#e6db74">&#34;Hello, </span><span style="color:#e6db74">\(</span>person<span style="color:#e6db74">)</span><span style="color:#e6db74">!&#34;</span>)
+}
+greet(person: <span style="color:#e6db74">&#34;Dave&#34;</span>)
+<span style="color:#75715e">// 打印“Hello, Dave!”</span>
+</code></pre></div><h3 id="多重返回值函数">多重返回值函数</h3>
+<p>你可以用元组（tuple）类型让多个值作为一个复合值从函数中返回。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">minMax</span>(array: [Int]) -&gt; (min: Int, max: Int) {
+    <span style="color:#66d9ef">var</span> currentMin = array[<span style="color:#ae81ff">0</span>]
+    <span style="color:#66d9ef">var</span> currentMax = array[<span style="color:#ae81ff">0</span>]
+    <span style="color:#66d9ef">for</span> value <span style="color:#66d9ef">in</span> array[<span style="color:#ae81ff">1.</span>.&lt;array.count] {
+        <span style="color:#66d9ef">if</span> value <span style="color:#f92672">&lt;</span> currentMin {
+            currentMin = value
+        }
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> value <span style="color:#f92672">&gt;</span> currentMax {
+            currentMax = value
+        }
+    }
+    <span style="color:#66d9ef">return</span> (currentMin, currentMax)
+}
+print(minMax(array: [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">8</span>]))  <span style="color:#75715e">// 这是一个元组(min: 1, max: 9)</span>
+
+<span style="color:#66d9ef">let</span> tumple = [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">8</span>]
+
+print(<span style="color:#e6db74">&#34;this is </span><span style="color:#e6db74">\(</span>minMax<span style="color:#e6db74">(</span>array: tumple<span style="color:#e6db74">)</span>.<span style="color:#ae81ff">0</span><span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>) <span style="color:#75715e">// this is 1 第一个元组值</span>
+print(<span style="color:#e6db74">&#34;this is </span><span style="color:#e6db74">\(</span>minMax<span style="color:#e6db74">(</span>array: tumple<span style="color:#e6db74">)</span>.max<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>) <span style="color:#75715e">// this is 9  元组max对应的值</span>
+</code></pre></div>]]></content>
+        </item>
+        
+        <item>
+            <title>Switft5.1基础运算符</title>
+            <link>https://dev.hanry.top/posts/2020/08/switft5.1%E5%9F%BA%E7%A1%80%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+            <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
+            
+            <guid>https://dev.hanry.top/posts/2020/08/switft5.1%E5%9F%BA%E7%A1%80%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
             <description>术语 运算符分为一元、二元和三元运算符：
  一元运算符是对单一对象操作（例如+a, !b, c!） 二元运算符是对两个对象操作（例如a + b, a - b） 三元运算符是对三个对象操作，swift中只有一个就是a ? b : c   三元运算符意思是问题 ? 答案 1 : 答案 2，后文会讲到
  赋值运算符 赋值运算符（a = b），表示用 b 的值来初始化或更新 a 的值：
@@ -120,159 +271,6 @@ range.contains(<span style="color:#f92672">-</span><span style="color:#ae81ff">1
 <li>逻辑或（<code>a || b</code>）</li>
 </ul>
 ]]></content>
-        </item>
-        
-        <item>
-            <title>Switft5.1函数笔记</title>
-            <link>https://dev.hanry.top/posts/2020/08/switft5.1%E5%87%BD%E6%95%B0%E7%AC%94%E8%AE%B0/</link>
-            <pubDate>Sat, 29 Aug 2020 11:39:00 +0800</pubDate>
-            
-            <guid>https://dev.hanry.top/posts/2020/08/switft5.1%E5%87%BD%E6%95%B0%E7%AC%94%E8%AE%B0/</guid>
-            <description>[toc]
-函数本质是什么 函数本质是用来复用一段代码
-如何定义函数 函数定义使用func，以 func 作为前缀。指定函数返回类型时，用返回箭头 -&amp;gt;（一个连字符后跟一个右尖括号）后跟返回类型的名称的方式来表示。
-基本语法是:
-func name(lastname: String, firstname: String) -&amp;gt; String{ ... } 意思是：
-func 函数名(参数一: 类型, 参数二: 类型, 以此类推) -&amp;gt; 返回值类型 { ... } 参数 参数的定义需要有名字和类型
-无参数函数 函数是可以没有参数的，当函数没有参数时，在函数名后还是需要一对圆括号。当被调用时，也需要在函数名后写一对圆括号。
-例如：
-func sayHelloWorld() -&amp;gt; String { return &amp;#34;hello, world&amp;#34; } print(sayHelloWorld()) // 打印“hello, world” 参数标签 每个函数参数都有一个参数标签（argument label）以及一个参数名称（parameter name），参数标签本质上是指向参数名称的。
-默认情况下，函数参数使用参数名称来作为它们的参数标签。
-如何指定参数标签 在参数名称前指定它的参数标签，中间以空格分隔
-例如：
-func gotowork(at time: String) { //at就是参数标签，time就是参数名称 print(&amp;#34;this time is \(time)&amp;#34;) } gotowork(at: &amp;#34;8:00&amp;#34;) // 输出this time is 8:00 //有了参数标签，有时会让代码更易读 调用函数读起来go to work at 8:00  调用函数的参数也是可以没有标签的，只需要在函数中定义参数时前面加一个_，即可忽略参数标签</description>
-            <content type="html"><![CDATA[<p>[toc]</p>
-<h1 id="函数本质是什么">函数本质是什么</h1>
-<p>函数本质是用来复用一段代码</p>
-<h2 id="如何定义函数">如何定义函数</h2>
-<p>函数定义使用func，以 <code>func</code> 作为前缀。指定函数返回类型时，用返回箭头 <code>-&gt;</code>（一个连字符后跟一个右尖括号）后跟返回类型的名称的方式来表示。</p>
-<p>基本语法是:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">name</span>(lastname: String, firstname: String) -&gt; String{
-  ...
-}
-</code></pre></div><p>意思是：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#960050;background-color:#1e0010">函数名</span>(<span style="color:#960050;background-color:#1e0010">参数一</span>: <span style="color:#960050;background-color:#1e0010">类型</span>, <span style="color:#960050;background-color:#1e0010">参数二</span>: <span style="color:#960050;background-color:#1e0010">类型</span>, <span style="color:#960050;background-color:#1e0010">以此类推</span>) -&gt; <span style="color:#960050;background-color:#1e0010">返回值类型</span> {
-  ...
-}
-</code></pre></div><h2 id="参数">参数</h2>
-<p>参数的定义需要有名字和类型</p>
-<h3 id="无参数函数">无参数函数</h3>
-<p>函数是可以没有参数的，当函数没有参数时，在函数名后还是需要一对圆括号。当被调用时，也需要在函数名后写一对圆括号。</p>
-<p>例如：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">sayHelloWorld</span>() -&gt; String {
-    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;hello, world&#34;</span>
-}
-print(sayHelloWorld())
-<span style="color:#75715e">// 打印“hello, world”</span>
-</code></pre></div><h3 id="参数标签">参数标签</h3>
-<p>每个函数参数都有一个<em>参数标签（argument label）<em>以及一个</em>参数名称（parameter name）</em>，参数标签本质上是指向参数名称的。</p>
-<p><strong>默认情况下，函数参数使用参数名称来作为它们的参数标签。</strong></p>
-<h4 id="如何指定参数标签">如何指定参数标签</h4>
-<p>在参数名称前指定它的参数标签，中间以空格分隔</p>
-<p>例如：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">gotowork</span>(at time: String) { <span style="color:#75715e">//at就是参数标签，time就是参数名称</span>
-  	print(<span style="color:#e6db74">&#34;this time is </span><span style="color:#e6db74">\(</span>time<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
-}
-gotowork(at: <span style="color:#e6db74">&#34;8:00&#34;</span>) <span style="color:#75715e">// 输出this time is 8:00</span>
-<span style="color:#75715e">//有了参数标签，有时会让代码更易读  调用函数读起来go to work at 8:00</span>
-</code></pre></div><blockquote>
-<p>调用函数的参数也是可以没有标签的，只需要在函数中定义参数时前面加一个_，即可忽略参数标签</p>
-<p>例如<code>func sayHelloWorld(_ sentence: string) { ... }</code></p>
-<p>调用时直接写<code>sayHelloWorld(&quot;hello world&quot;)</code></p>
-<p>而不必写<code>sayHellowWorld(sentence: &quot;hello world&quot;)</code></p>
-</blockquote>
-<h3 id="默认参数值">默认参数值</h3>
-<p>参数值在定义时可以默认给一个值。当默认值被定义后，调用这个函数时可以忽略这个参数。</p>
-<p><code>Func 函数名(参数名1: 参数类型1 = 默认值1，参数名2: 参数类型2 = 默认值2 )</code></p>
-<p>例如：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">check</span>(name: String = <span style="color:#e6db74">&#34;none&#34;</span>, age: Int = <span style="color:#ae81ff">1</span>, job: String) { <span style="color:#75715e">//name默认是none，age默认是1</span>
-    print(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">\(</span>name<span style="color:#e6db74">)</span><span style="color:#e6db74">,</span><span style="color:#e6db74">\(</span>age<span style="color:#e6db74">)</span><span style="color:#e6db74">,</span><span style="color:#e6db74">\(</span>job<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
-}
-
-check(name: <span style="color:#e6db74">&#34;joy&#34;</span>, age: <span style="color:#ae81ff">18</span>, job: <span style="color:#e6db74">&#34;develop&#34;</span>) <span style="color:#75715e">//joy 18 develop</span>
-check(age: <span style="color:#ae81ff">1</span>, job: <span style="color:#e6db74">&#34;student&#34;</span>)  <span style="color:#75715e">//none 1 student</span>
-</code></pre></div><h3 id="可变参数">可变参数</h3>
-<p>通过在变量类型名后面加入（<code>...</code>）的方式来定义可变参数。</p>
-<p>可变参数的传入值在函数体中变为此类型的一个数组。例如，一个叫做 <code>numbers</code> 的 <code>Double...</code> 型可变参数，在函数体内可以当做一个叫 <code>numbers</code> 的 <code>[Double]</code> 型的数组常量。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">arithmeticMean</span>(<span style="color:#66d9ef">_</span> numbers: Double...) -&gt; Double {
-    <span style="color:#66d9ef">var</span> total: Double = <span style="color:#ae81ff">0</span>
-    <span style="color:#66d9ef">for</span> number <span style="color:#66d9ef">in</span> numbers {
-        total <span style="color:#f92672">+=</span> number
-    }
-    <span style="color:#66d9ef">return</span> total <span style="color:#f92672">/</span> Double(numbers.count)
-}
-arithmeticMean(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>)  <span style="color:#75715e">//相当于number变成了一个数组[1,2,3,4,5]</span>
-<span style="color:#75715e">// 返回 3.0, 是这 5 个数的平均数。</span>
-arithmeticMean(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">8.25</span>, <span style="color:#ae81ff">18.75</span>)
-<span style="color:#75715e">// 返回 10.0, 是这 3 个数的平均数。</span>
-</code></pre></div><blockquote>
-<p>需要注意的是：</p>
-<ol>
-<li>一个函数里面最多只能有一个可变参数</li>
-<li>紧跟在可变参数后面的参数不能省略参数标签</li>
-</ol>
-<p>🉑 ​<code> func sum(name: String..., age: Int)</code></p>
-<p>🚫 <code>func sum(name: String..., _ age: Int)</code></p>
-</blockquote>
-<h3 id="输入输出函数">输入输出函数⚠️</h3>
-<p>函数参数默认是常量。试图在函数体中更改参数值将会导致编译错误。</p>
-<p>如果你想要一个函数可以修改参数的值，并且想要在这些修改在函数调用结束后仍然存在，那么就应该把这个参数定义为<em><strong>输入输出参数（In-Out Parameters）</strong></em>。</p>
-<p>定义一个输入输出参数时，在参数定义前加 <code>inout</code> 关键字。</p>
-<p>你只能传递变量给输入输出参数。你不能传入常量或者字面量，因为这些量是不能被修改的。当传入的参数作为输入输出参数时，需要在参数名前加 <code>&amp;</code> 符，表示这个值可以被函数修改。</p>
-<blockquote>
-<p>简单理解，就是假如有一个<code>func sum(name: inout String, age: inout Int){...}</code>，在外部调用函数时，<code>sum(name: ray, age: 18)</code>，其中的<code>ray</code>和<code>18</code>有可能会被函数改变</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#75715e">//示例代码，快速搞懂</span>
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">sum</span>(v1: <span style="color:#66d9ef">inout</span> Int, v2: <span style="color:#66d9ef">inout</span> Int) {  <span style="color:#75715e">//这是一个输入输出函数</span>
-    <span style="color:#66d9ef">let</span> copy = v1
-    v1 = v1 <span style="color:#f92672">+</span> v2
-    v2 = copy <span style="color:#f92672">-</span> v2
-}
-
-<span style="color:#66d9ef">var</span> num1 = <span style="color:#ae81ff">1</span> <span style="color:#75715e">//看啊，num1是1</span>
-<span style="color:#66d9ef">var</span> num2 = <span style="color:#ae81ff">4</span> <span style="color:#75715e">//看啊，num2是4</span>
-
-print(num1, num2) <span style="color:#75715e">//打印出来的确是 1 4</span>
-
-sum(v1: &amp;num1, v2: &amp;num2) <span style="color:#75715e">//调用函数sum</span>
-print(num1, num2) <span style="color:#75715e">//打印出来就是5 -3，现在num1就是1+5=5， num2就是1-4=-3</span>
-<span style="color:#75715e">//那我在调用一次呢</span>
-sum(v1: &amp;num1, v2: &amp;num2) <span style="color:#75715e">//再次调用函数sum</span>
-print(num1, num2) <span style="color:#75715e">//打印出来就是2 8，现在num1就是5+(-3)=2， num2就是5-(-3)=8</span>
-</code></pre></div></blockquote>
-<h2 id="返回值">返回值</h2>
-<p>函数里面默认是有返回值<code>return</code></p>
-<p>如果需要无返回值</p>
-<h3 id="无返回值函数">无返回值函数</h3>
-<p>函数可以没有返回值。</p>
-<p>因为这个函数不需要返回值，所以这个函数的定义中没有返回箭头（-&gt;）和返回类型。</p>
-<p>下面是 <code>greet(person:)</code> 函数的另一个版本，这个函数直接打印一个 <code>String</code> 值，而不是返回它：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">greet</span>(person: String) {
-    print(<span style="color:#e6db74">&#34;Hello, </span><span style="color:#e6db74">\(</span>person<span style="color:#e6db74">)</span><span style="color:#e6db74">!&#34;</span>)
-}
-greet(person: <span style="color:#e6db74">&#34;Dave&#34;</span>)
-<span style="color:#75715e">// 打印“Hello, Dave!”</span>
-</code></pre></div><h3 id="多重返回值函数">多重返回值函数</h3>
-<p>你可以用元组（tuple）类型让多个值作为一个复合值从函数中返回。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">minMax</span>(array: [Int]) -&gt; (min: Int, max: Int) {
-    <span style="color:#66d9ef">var</span> currentMin = array[<span style="color:#ae81ff">0</span>]
-    <span style="color:#66d9ef">var</span> currentMax = array[<span style="color:#ae81ff">0</span>]
-    <span style="color:#66d9ef">for</span> value <span style="color:#66d9ef">in</span> array[<span style="color:#ae81ff">1.</span>.&lt;array.count] {
-        <span style="color:#66d9ef">if</span> value <span style="color:#f92672">&lt;</span> currentMin {
-            currentMin = value
-        }
-        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> value <span style="color:#f92672">&gt;</span> currentMax {
-            currentMax = value
-        }
-    }
-    <span style="color:#66d9ef">return</span> (currentMin, currentMax)
-}
-print(minMax(array: [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">8</span>]))  <span style="color:#75715e">// 这是一个元组(min: 1, max: 9)</span>
-
-<span style="color:#66d9ef">let</span> tumple = [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">8</span>]
-
-print(<span style="color:#e6db74">&#34;this is </span><span style="color:#e6db74">\(</span>minMax<span style="color:#e6db74">(</span>array: tumple<span style="color:#e6db74">)</span>.<span style="color:#ae81ff">0</span><span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>) <span style="color:#75715e">// this is 1 第一个元组值</span>
-print(<span style="color:#e6db74">&#34;this is </span><span style="color:#e6db74">\(</span>minMax<span style="color:#e6db74">(</span>array: tumple<span style="color:#e6db74">)</span>.max<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>) <span style="color:#75715e">// this is 9  元组max对应的值</span>
-</code></pre></div>]]></content>
         </item>
         
         <item>
