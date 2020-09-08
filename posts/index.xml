@@ -10,11 +10,11 @@
         <atom:link href="https://dev.hanry.top/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>Switft5.1函数笔记</title>
-            <link>https://dev.hanry.top/posts/2020/09/switft5.1%E5%87%BD%E6%95%B0%E7%AC%94%E8%AE%B0/</link>
+            <title>Swift5.1函数笔记</title>
+            <link>https://dev.hanry.top/posts/2020/09/swift5.1%E5%87%BD%E6%95%B0%E7%AC%94%E8%AE%B0/</link>
             <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://dev.hanry.top/posts/2020/09/switft5.1%E5%87%BD%E6%95%B0%E7%AC%94%E8%AE%B0/</guid>
+            <guid>https://dev.hanry.top/posts/2020/09/swift5.1%E5%87%BD%E6%95%B0%E7%AC%94%E8%AE%B0/</guid>
             <description>函数本质是什么 函数本质是用来复用一段代码
 如何定义函数 函数定义使用func，以 func 作为前缀。指定函数返回类型时，用返回箭头 -&amp;gt;（一个连字符后跟一个右尖括号）后跟返回类型的名称的方式来表示。
 基本语法是:
@@ -161,11 +161,11 @@ print(<span style="color:#e6db74">&#34;this is </span><span style="color:#e6db74
         </item>
         
         <item>
-            <title>Switft5.1基础运算符</title>
-            <link>https://dev.hanry.top/posts/2020/08/switft5.1%E5%9F%BA%E7%A1%80%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
+            <title>Swift5.1基础运算符</title>
+            <link>https://dev.hanry.top/posts/2020/08/swift5.1%E5%9F%BA%E7%A1%80%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
             <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://dev.hanry.top/posts/2020/08/switft5.1%E5%9F%BA%E7%A1%80%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
+            <guid>https://dev.hanry.top/posts/2020/08/swift5.1%E5%9F%BA%E7%A1%80%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
             <description>术语 运算符分为一元、二元和三元运算符：
  一元运算符是对单一对象操作（例如+a, !b, c!） 二元运算符是对两个对象操作（例如a + b, a - b） 三元运算符是对三个对象操作，swift中只有一个就是a ? b : c   三元运算符意思是问题 ? 答案 1 : 答案 2，后文会讲到
  赋值运算符 赋值运算符（a = b），表示用 b 的值来初始化或更新 a 的值：
@@ -274,11 +274,11 @@ range.contains(<span style="color:#f92672">-</span><span style="color:#ae81ff">1
         </item>
         
         <item>
-            <title>Switft5.1基础笔记</title>
-            <link>https://dev.hanry.top/posts/2020/08/switft5.1%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</link>
+            <title>Swift5.1基础笔记</title>
+            <link>https://dev.hanry.top/posts/2020/08/swift5.1%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</link>
             <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
             
-            <guid>https://dev.hanry.top/posts/2020/08/switft5.1%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</guid>
+            <guid>https://dev.hanry.top/posts/2020/08/swift5.1%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</guid>
             <description>常量和变量 常量声明let
 变量声明var
 例如：
@@ -366,7 +366,7 @@ print (<span style="color:#e6db74">&#34;The current value of friendlyname is </s
 <blockquote>
 <p><code>Double</code>精确度很高，至少有15位数字，而<code>Float</code>只有6位数字。选择哪个类型取决于你的代码需要处理的值的范围，在两种类型都匹配的情况下，优先选择<code>Double</code>。</p>
 </blockquote>
-<p>##类型安全和类型推断</p>
+<h2 id="类型安全和类型推断">类型安全和类型推断</h2>
 <p>Swift 是一个*类型安全（type safe）*的语言。类型安全的语言可以让你清楚地知道代码要处理的值的类型。如果你的代码需要一个 <code>String</code>，你绝对不可能不小心传进去一个 <code>Int</code>。</p>
 <p>例如，如果你给一个新常量赋值 <code>42</code> 并且没有标明类型，Swift 可以推断出常量类型是 <code>Int</code> ，因为你给它赋的初始值看起来像一个整数：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> meaningOfLife = <span style="color:#ae81ff">42</span>

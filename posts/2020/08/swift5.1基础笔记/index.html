@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="萨雷斯煜 ">
+<meta name="description" content="常量和变量 常量声明let
+变量声明var
+例如：
+let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0 可以在一行中声明多个变量，类似C
+例如：
+var a = 1 , b = 2 , c = 3  ⚠️一般不变的值用常量let,var只声明会变化的值，防止出错
+ 类型注解 类型注解是声明常量或者变量的时候，说明常量或者变量中要存储的值的类型。
+如果要添加类型注解，需要在常量或者变量名后面加上一个冒号和空格，然后加上类型名称。
+例如：
+var welcomeMessage: String //说明 在此声明的 welcomeMessage 只能为String类型 //welcomeMessage 可以设置为任意字符串 welcomeMessage = &amp;#34;Hello world&amp;#34; ✔️ welcomeMessage = &amp;#34;12&amp;#34; ✔️ welcomeMessage = 12 ❌ 同样，你可以在一行中定义多个变量，最后一个变量名后面添加类型注解：
+var yellow, green, blue: Double  ⚠️正常情况下很少需要类型注解，Swift可以推断出这个，除非在明确要限制变量类型的情况下，一般不需要添加
+ 常量和变量的命名 常量和变量名可以包含任何字符，包括 Unicode 字符：常量和变量名可以包含任何字符，包括 Unicode 字符：" />
+<meta name="keywords" content=", Swift, Develop" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="#252627" />
+<link rel="canonical" href="https://dev.hanry.top/posts/2020/08/swift5.1%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/" />
+
+
+    <title>
+        
+            Swift5.1基础笔记 :: 萨雷斯煜のDev Note  — Do what makes you excited.
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://dev.hanry.top/main.1f3ed13d9e6624d910b4834d9eecdcf98f50376fa6dc098f96070a92f88c62fd.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://dev.hanry.top/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://dev.hanry.top/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://dev.hanry.top/favicon-16x16.png">
+    <link rel="manifest" href="https://dev.hanry.top/site.webmanifest">
+    <link rel="mask-icon" href="https://dev.hanry.top/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="https://dev.hanry.top/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+
+
+<meta itemprop="name" content="Swift5.1基础笔记">
+<meta itemprop="description" content="常量和变量 常量声明let
+变量声明var
+例如：
+let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0 可以在一行中声明多个变量，类似C
+例如：
+var a = 1 , b = 2 , c = 3  ⚠️一般不变的值用常量let,var只声明会变化的值，防止出错
+ 类型注解 类型注解是声明常量或者变量的时候，说明常量或者变量中要存储的值的类型。
+如果要添加类型注解，需要在常量或者变量名后面加上一个冒号和空格，然后加上类型名称。
+例如：
+var welcomeMessage: String //说明 在此声明的 welcomeMessage 只能为String类型 //welcomeMessage 可以设置为任意字符串 welcomeMessage = &#34;Hello world&#34; ✔️ welcomeMessage = &#34;12&#34; ✔️ welcomeMessage = 12 ❌ 同样，你可以在一行中定义多个变量，最后一个变量名后面添加类型注解：
+var yellow, green, blue: Double  ⚠️正常情况下很少需要类型注解，Swift可以推断出这个，除非在明确要限制变量类型的情况下，一般不需要添加
+ 常量和变量的命名 常量和变量名可以包含任何字符，包括 Unicode 字符：常量和变量名可以包含任何字符，包括 Unicode 字符：">
+<meta itemprop="datePublished" content="2020-08-15T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-08-15T00:00:00+00:00" />
+<meta itemprop="wordCount" content="484">
+<meta itemprop="image" content="https://dev.hanry.top"/>
+
+
+
+<meta itemprop="keywords" content="Swift,Develop," />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://dev.hanry.top"/>
+
+<meta name="twitter:title" content="Swift5.1基础笔记"/>
+<meta name="twitter:description" content="常量和变量 常量声明let
+变量声明var
+例如：
+let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0 可以在一行中声明多个变量，类似C
+例如：
+var a = 1 , b = 2 , c = 3  ⚠️一般不变的值用常量let,var只声明会变化的值，防止出错
+ 类型注解 类型注解是声明常量或者变量的时候，说明常量或者变量中要存储的值的类型。
+如果要添加类型注解，需要在常量或者变量名后面加上一个冒号和空格，然后加上类型名称。
+例如：
+var welcomeMessage: String //说明 在此声明的 welcomeMessage 只能为String类型 //welcomeMessage 可以设置为任意字符串 welcomeMessage = &#34;Hello world&#34; ✔️ welcomeMessage = &#34;12&#34; ✔️ welcomeMessage = 12 ❌ 同样，你可以在一行中定义多个变量，最后一个变量名后面添加类型注解：
+var yellow, green, blue: Double  ⚠️正常情况下很少需要类型注解，Swift可以推断出这个，除非在明确要限制变量类型的情况下，一般不需要添加
+ 常量和变量的命名 常量和变量名可以包含任何字符，包括 Unicode 字符：常量和变量名可以包含任何字符，包括 Unicode 字符："/>
+
+
+
+    <meta property="og:title" content="Swift5.1基础笔记" />
+<meta property="og:description" content="常量和变量 常量声明let
+变量声明var
+例如：
+let maximumNumberOfLoginAttempts = 10 var currentLoginAttempt = 0 可以在一行中声明多个变量，类似C
+例如：
+var a = 1 , b = 2 , c = 3  ⚠️一般不变的值用常量let,var只声明会变化的值，防止出错
+ 类型注解 类型注解是声明常量或者变量的时候，说明常量或者变量中要存储的值的类型。
+如果要添加类型注解，需要在常量或者变量名后面加上一个冒号和空格，然后加上类型名称。
+例如：
+var welcomeMessage: String //说明 在此声明的 welcomeMessage 只能为String类型 //welcomeMessage 可以设置为任意字符串 welcomeMessage = &#34;Hello world&#34; ✔️ welcomeMessage = &#34;12&#34; ✔️ welcomeMessage = 12 ❌ 同样，你可以在一行中定义多个变量，最后一个变量名后面添加类型注解：
+var yellow, green, blue: Double  ⚠️正常情况下很少需要类型注解，Swift可以推断出这个，除非在明确要限制变量类型的情况下，一般不需要添加
+ 常量和变量的命名 常量和变量名可以包含任何字符，包括 Unicode 字符：常量和变量名可以包含任何字符，包括 Unicode 字符：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dev.hanry.top/posts/2020/08/swift5.1%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/" />
+<meta property="og:image" content="https://dev.hanry.top"/>
+<meta property="article:published_time" content="2020-08-15T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-08-15T00:00:00+00:00" />
+
+
+
+
+
+
+    <meta property="article:published_time" content="2020-08-15 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://dev.hanry.top/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd /home/</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://dev.hanry.top/posts/">Posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        3 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="https://dev.hanry.top/posts/2020/08/swift5.1%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/">Swift5.1基础笔记</a>
+      </h1>
+        <hr />
+        <aside id="toc">
+          <div class="toc-title">Table of Contents</div>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#类型注解">类型注解</a></li>
+    <li><a href="#常量和变量的命名">常量和变量的命名</a></li>
+    <li><a href="#输出常量和变量">输出常量和变量</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#整数">整数</a>
+      <ul>
+        <li><a href="#整数范围">整数范围</a></li>
+        <li><a href="#int">Int</a></li>
+        <li><a href="#uint">UInt</a></li>
+      </ul>
+    </li>
+    <li><a href="#浮点数">浮点数</a></li>
+    <li><a href="#类型安全和类型推断">类型安全和类型推断</a></li>
+    <li><a href="#数值型字面量">数值型字面量</a>
+      <ul>
+        <li><a href="#整数字面量">整数字面量</a></li>
+        <li><a href="#浮点字面量">浮点字面量</a></li>
+      </ul>
+    </li>
+    <li><a href="#数值类型转换">数值类型转换</a>
+      <ul>
+        <li><a href="#整数和浮点数转换">整数和浮点数转换</a></li>
+      </ul>
+    </li>
+    <li><a href="#布尔值">布尔值</a></li>
+    <li><a href="#元组">元组</a></li>
+  </ul>
+</nav>
+        </aside>
+        <hr />
+
+      
+
+      <div class="post-content">
+        <h1 id="常量和变量">常量和变量</h1>
+<p>常量声明<code>let</code></p>
+<p>变量声明<code>var</code></p>
+<p>例如：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> maximumNumberOfLoginAttempts = <span style="color:#ae81ff">10</span>
+<span style="color:#66d9ef">var</span> currentLoginAttempt = <span style="color:#ae81ff">0</span>
+</code></pre></div><p>可以在一行中声明多个变量，类似C</p>
+<p>例如：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">var</span> a = <span style="color:#ae81ff">1</span> , b = <span style="color:#ae81ff">2</span> , c = <span style="color:#ae81ff">3</span>
+</code></pre></div><blockquote>
+<p>⚠️一般不变的值用常量<code>let</code>,<code>var</code>只声明会变化的值，防止出错</p>
+</blockquote>
+<h2 id="类型注解">类型注解</h2>
+<p>类型注解是声明常量或者变量的时候，说明常量或者变量中要存储的值的类型。</p>
+<p>如果要添加类型注解，需要在常量或者变量名后面加上一个冒号和空格，然后加上类型名称。</p>
+<p>例如：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">var</span> welcomeMessage: String
+
+<span style="color:#75715e">//说明 在此声明的 welcomeMessage 只能为String类型</span>
+<span style="color:#75715e">//welcomeMessage 可以设置为任意字符串</span>
+
+welcomeMessage = <span style="color:#e6db74">&#34;Hello world&#34;</span> <span style="color:#960050;background-color:#1e0010">✔️</span>
+welcomeMessage = <span style="color:#e6db74">&#34;12&#34;</span> <span style="color:#960050;background-color:#1e0010">✔️</span>
+welcomeMessage = <span style="color:#ae81ff">12</span> <span style="color:#960050;background-color:#1e0010">❌</span>
+</code></pre></div><p>同样，你可以在一行中定义多个变量，最后一个变量名后面添加类型注解：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">var</span> yellow, green, blue: Double
+</code></pre></div><blockquote>
+<p>⚠️正常情况下很少需要类型注解，Swift可以推断出这个，除非在明确要限制变量类型的情况下，一般不需要添加</p>
+</blockquote>
+<h2 id="常量和变量的命名">常量和变量的命名</h2>
+<p>常量和变量名可以包含任何字符，包括 Unicode 字符：常量和变量名可以包含任何字符，包括 Unicode 字符：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> <span style="color:#960050;background-color:#1e0010">π</span> = <span style="color:#ae81ff">3.14159</span>
+<span style="color:#66d9ef">let</span> <span style="color:#960050;background-color:#1e0010">你好</span> = <span style="color:#e6db74">&#34;你好世界&#34;</span>
+<span style="color:#66d9ef">let</span> <span style="color:#960050;background-color:#1e0010">🐶🐮</span> = <span style="color:#e6db74">&#34;dogcow&#34;</span>
+</code></pre></div><blockquote>
+<p>⚠️与变量不同，常量的值一旦被确定就不能更改了。如下所示，会导致编译出错。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> languageName = <span style="color:#e6db74">&#34;Swift&#34;</span>
+languageName = <span style="color:#e6db74">&#34;Swift++&#34;</span>
+<span style="color:#75715e">// 这会报编译时错误 - languageName 不可改变</span>
+</code></pre></div></blockquote>
+<h2 id="输出常量和变量">输出常量和变量</h2>
+<p>输出的语法跟C语言基本一致</p>
+<p>Swift中，占位符为 <code>反斜杠+(常量名/变量名)</code>，例如<code>\(friendlyname)</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">var</span> friendlyname = <span style="color:#e6db74">&#34;电视机&#34;</span>
+print (<span style="color:#e6db74">&#34;The current value of friendlyname is </span><span style="color:#e6db74">\(</span>friendlyname<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</code></pre></div><h1 id="数据类型">数据类型</h1>
+<h2 id="整数">整数</h2>
+<p>整数就是没有小数部分的数字，比如 <code>42</code> 和 <code>-23</code> 。整数可以是 <code>有符号</code>（正、负、零）或者 <code>无符号</code>（正、零）。</p>
+<blockquote>
+<p>就像 Swift 的其他类型一样，整数类型采用<strong>大写命名法</strong>。</p>
+</blockquote>
+<h3 id="整数范围">整数范围</h3>
+<p><code>Int</code> 可以存储的整数范围也可以达到 <code>-2,147,483,648</code> ~ <code>2,147,483,647</code>，大多数时候这已经足够大了。</p>
+<h3 id="int">Int</h3>
+<p>Swift 提供了一个特殊的整数类型 <code>Int</code>，长度与当前平台的原生字长相同：</p>
+<ul>
+<li>在32位平台上，<code>Int</code> 和 <code>Int32</code> 长度相同。</li>
+<li>在64位平台上，<code>Int</code> 和 <code>Int64</code> 长度相同。</li>
+</ul>
+<p>除非你需要特定长度的整数，一般来说使用 <code>Int</code> 就够了。这可以提高代码一致性和可复用性。</p>
+<h3 id="uint">UInt</h3>
+<p>代表无符号整数，一般不使用。</p>
+<blockquote>
+<p>尽量不要使用 <code>UInt</code>，除非你真的需要存储一个和当前平台原生字长相同的无符号整数。除了这种情况，最好使用 <code>Int</code>，即使你要存储的值已知是非负的。统一使用 <code>Int</code>可以提高代码的可复用性浮点数</p>
+</blockquote>
+<h2 id="浮点数">浮点数</h2>
+<p>浮点数是有小数部分的数字，比如 <code>3.14159</code>、<code>0.1</code> 和 <code>-273.15</code>。</p>
+<p>浮点类型比整数类型表示的范围更大，可以存储比 <code>Int</code> 类型更大或者更小的数字。Swift 提供了两种有符号浮点数类型：</p>
+<ul>
+<li><code>Double</code> 表示64位浮点数。当你需要存储很大或者很高精度的浮点数时请使用此类型。</li>
+<li><code>Float</code> 表示32位浮点数。精度要求不高的话可以使用此类型。</li>
+</ul>
+<blockquote>
+<p><code>Double</code>精确度很高，至少有15位数字，而<code>Float</code>只有6位数字。选择哪个类型取决于你的代码需要处理的值的范围，在两种类型都匹配的情况下，优先选择<code>Double</code>。</p>
+</blockquote>
+<h2 id="类型安全和类型推断">类型安全和类型推断</h2>
+<p>Swift 是一个*类型安全（type safe）*的语言。类型安全的语言可以让你清楚地知道代码要处理的值的类型。如果你的代码需要一个 <code>String</code>，你绝对不可能不小心传进去一个 <code>Int</code>。</p>
+<p>例如，如果你给一个新常量赋值 <code>42</code> 并且没有标明类型，Swift 可以推断出常量类型是 <code>Int</code> ，因为你给它赋的初始值看起来像一个整数：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> meaningOfLife = <span style="color:#ae81ff">42</span>
+<span style="color:#75715e">// meaningOfLife 会被推测为 Int 类型</span>
+</code></pre></div><p>同理，如果你没有给浮点字面量标明类型，Swift 会推断你想要的是 <code>Double</code>：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> pi = <span style="color:#ae81ff">3.14159</span>
+<span style="color:#75715e">// pi 会被推测为 Double 类型</span>
+</code></pre></div><p>当推断浮点数的类型时，Swift 总是会选择 <code>Double</code> 而不是 <code>Float</code>。</p>
+<p>如果表达式中同时出现了整数和浮点数，会被推断为 <code>Double</code> 类型：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> anotherPi = <span style="color:#ae81ff">3</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.14159</span>
+<span style="color:#75715e">// anotherPi 会被推测为 Double 类型</span>
+</code></pre></div><p>原始值 <code>3</code> 没有显式声明类型，而表达式中出现了一个浮点字面量，所以表达式会被推断为 <code>Double</code> 类型。</p>
+<h2 id="数值型字面量">数值型字面量</h2>
+<h3 id="整数字面量">整数字面量</h3>
+<p>可以被写作：</p>
+<ul>
+<li>一个<em>十进制</em>数，没有前缀</li>
+<li>一个<em>二进制</em>数，前缀是 <code>0b</code></li>
+<li>一个<em>八进制</em>数，前缀是 <code>0o</code></li>
+<li>一个<em>十六进制</em>数，前缀是 <code>0x</code></li>
+</ul>
+<p>例如下面的所有整数字面量的十进制值都是 <code>17</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> decimalInteger = <span style="color:#ae81ff">17</span>
+<span style="color:#66d9ef">let</span> binaryInteger = <span style="color:#ae81ff">0b10001</span>       <span style="color:#75715e">// 二进制的17</span>
+<span style="color:#66d9ef">let</span> octalInteger = <span style="color:#ae81ff">0o21</span>           <span style="color:#75715e">// 八进制的17</span>
+<span style="color:#66d9ef">let</span> hexadecimalInteger = <span style="color:#ae81ff">0x11</span>     <span style="color:#75715e">// 十六进制的17</span>
+</code></pre></div><h3 id="浮点字面量">浮点字面量</h3>
+<p>浮点字面量可以是十进制（没有前缀）或者是十六进制（前缀是 <code>0x</code> ）。小数点两边必须有至少一个十进制数字（或者是十六进制的数字）。</p>
+<p>十进制浮点数也可以有一个可选的指数（exponent)，通过大写或者小写的 <code>e</code> 来指定；十六进制浮点数必须有一个指数，通过大写或者小写的 <code>p</code> 来指定。</p>
+<p>如果一个十进制数的指数为 <code>exp</code>，那这个数相当于基数和10^exp 的乘积：</p>
+<ul>
+<li><code>1.25e2</code> 表示 1.25 × 10^2，等于 <code>125.0</code>。</li>
+<li><code>1.25e-2</code> 表示 1.25 × 10^-2，等于 <code>0.0125</code>。</li>
+</ul>
+<p>如果一个十六进制数的指数为 <code>exp</code>，那这个数相当于基数和2^exp 的乘积：</p>
+<ul>
+<li><code>0xFp2</code> 表示 15 × 2^2，等于 <code>60.0</code>。</li>
+<li><code>0xFp-2</code> 表示 15 × 2^-2，等于 <code>3.75</code>。</li>
+</ul>
+<p>下面的这些浮点字面量都等于十进制的 <code>12.1875</code>：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> decimalDouble = <span style="color:#ae81ff">12.1875</span>
+<span style="color:#66d9ef">let</span> exponentDouble = <span style="color:#ae81ff">1.21875e1</span>
+<span style="color:#66d9ef">let</span> hexadecimalDouble = <span style="color:#ae81ff">0xC</span>.<span style="color:#ae81ff">3</span>p0
+</code></pre></div><blockquote>
+<p>整数和浮点数都可以添加额外的零并且包含下划线，并不会影响字面量：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> paddedDouble = <span style="color:#ae81ff">000123.456</span>
+<span style="color:#66d9ef">let</span> oneMillion = <span style="color:#ae81ff">1_000_000</span>
+<span style="color:#66d9ef">let</span> justOverOneMillion = <span style="color:#ae81ff">1_000_000.000_000_1</span>
+</code></pre></div></blockquote>
+<h2 id="数值类型转换">数值类型转换</h2>
+<h3 id="整数和浮点数转换">整数和浮点数转换</h3>
+<p>整数和浮点数的转换必须显式指定类型：</p>
+<p>例如：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> three = <span style="color:#ae81ff">3</span>
+<span style="color:#66d9ef">let</span> pointOneFourOneFiveNine = <span style="color:#ae81ff">0.14159</span>
+<span style="color:#66d9ef">let</span> pi = Double(three) <span style="color:#f92672">+</span> pointOneFourOneFiveNine
+<span style="color:#75715e">// pi 等于 3.14159，所以被推测为 Double 类型</span>
+</code></pre></div><p>这个例子中，常量 three 的值被用来创建一个 Double 类型的值，所以加号两边的数类型须相同。如果不进行转换，两者无法相加。</p>
+<p>浮点数到整数的反向转换同样行，整数类型可以用 <code>Double</code> 或者 <code>Float</code> 类型来初始化：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> integerPi = Int(pi)
+<span style="color:#75715e">// integerPi 等于 3，所以被推测为 Int 类型</span>
+
+<span style="color:#66d9ef">let</span> c = <span style="color:#ae81ff">231.3214353453</span>
+<span style="color:#66d9ef">let</span> cc = Int(c)
+<span style="color:#75715e">// cc = 231 ，说明重要的在Int上面</span>
+</code></pre></div><h2 id="布尔值">布尔值</h2>
+<p>Swift 有一个基本的<em>布尔（Boolean）类型</em>，叫做 <code>Bool</code>。布尔值指<em>逻辑</em>上的值，因为它们只能是真或者假。Swift 有两个布尔常量，<code>true</code> 和 <code>false</code>：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> orangesAreOrange = <span style="color:#66d9ef">true</span>
+<span style="color:#66d9ef">let</span> turnipsAreDelicious = <span style="color:#66d9ef">false</span>
+</code></pre></div><p>就像之前提到的 <code>Int</code> 和 <code>Double</code> 一样，如果你创建变量的时候给它们赋值 <code>true</code> 或者 <code>false</code>，那你不需要将常量或者变量声明为 <code>Bool</code> 类型。</p>
+<p>当你编写条件语句比如 <code>if</code> 语句的时候，布尔值非常有用：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">if</span> turnipsAreDelicious {
+    print(<span style="color:#e6db74">&#34;Mmm, tasty turnips!&#34;</span>)    <span style="color:#75715e">// 当 turnipsAreDelicious 为 true</span>
+} <span style="color:#66d9ef">else</span> {
+    print(<span style="color:#e6db74">&#34;Eww, turnips are horrible.&#34;</span>)  <span style="color:#75715e">// 当 turnipsAreDelicious 为 false</span>
+}
+<span style="color:#75715e">// 输出“Eww, turnips are horrible.”</span>
+</code></pre></div><p>可见，在if中使用布尔值，首先判断true，其次是false。</p>
+<h2 id="元组">元组</h2>
+<p>**元组（tuples）**把多个值组合成一个复合值。元组内的值可以是任意类型，并不要求是相同类型。</p>
+<p>下面这个例子中，(404, &ldquo;Not Found&rdquo;) 是一个描述 HTTP 状态码（HTTP status code）的元组。HTTP 状态码是当你请求网页的时候 web 服务器返回的一个特殊值。如果你请求的网页不存在就会返回一个 404 Not Found 状态码。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> http404Error = (<span style="color:#ae81ff">404</span>, <span style="color:#e6db74">&#34;Not Found&#34;</span>)
+<span style="color:#75715e">// http404Error 的类型是 (Int, String)，值是 (404, &#34;Not Found&#34;)</span>
+</code></pre></div><p>(404, &ldquo;Not Found&rdquo;) 元组把一个 Int 值和一个 String 值组合起来表示 HTTP 状态码的两个部分：一个数字和一个人类可读的描述。这个元组可以被描述为“一个类型为 (Int, String) 的元组”。</p>
+<p>你可以把任意顺序的类型组合成一个元组，这个元组可以包含所有类型。只要你想，你可以创建一个类型为 <code>(Int, Int, Int)</code> 或者 <code>(String, Bool)</code> 或者其他任何你想要的组合的元组。</p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+            <line x1="7" y1="7" x2="7" y2="7"></line>
+          </svg><span class="tag"><a href="https://dev.hanry.top/tags/swift/">Swift</a></span><span class="tag"><a href="https://dev.hanry.top/tags/develop/">Develop</a></span>
+        </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        484 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        2020-08-15 08:00 &#43;0800
+      </p>
+    </div>
+      <hr />
+      <div class="sharing-buttons">
+        
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fdev.hanry.top%2fposts%2f2020%2f08%2fswift5.1%25E5%259F%25BA%25E7%25A1%2580%25E7%25AC%2594%25E8%25AE%25B0%2f" target="_blank" rel="noopener" aria-label="" title="Share on facebook">
+  <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?url=https%3a%2f%2fdev.hanry.top%2fposts%2f2020%2f08%2fswift5.1%25E5%259F%25BA%25E7%25A1%2580%25E7%25AC%2594%25E8%25AE%25B0%2f" target="_blank" rel="noopener" aria-label="" title="Share on twitter">
+  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
+      <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Swift5.1%e5%9f%ba%e7%a1%80%e7%ac%94%e8%ae%b0&amp;caption=Swift5.1%e5%9f%ba%e7%a1%80%e7%ac%94%e8%ae%b0&amp;canonicalUrl=https%3a%2f%2fdev.hanry.top%2fposts%2f2020%2f08%2fswift5.1%25E5%259F%25BA%25E7%25A1%2580%25E7%25AC%2594%25E8%25AE%25B0%2f" target="_blank" rel="noopener" aria-label="" title="Share on tumblr">
+  <div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small">
+    <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.563 24c-5.093 0-7.031-3.756-7.031-6.411V9.747H5.116V6.648c3.63-1.313 4.512-4.596 4.71-6.469C9.84.051 9.941 0 9.999 0h3.517v6.114h4.801v3.633h-4.82v7.47c.016 1.001.375 2.371 2.207 2.371h.09c.631-.02 1.486-.205 1.936-.419l1.156 3.425c-.436.636-2.4 1.374-4.156 1.404h-.178l.011.002z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="mailto:?subject=Swift5.1%e5%9f%ba%e7%a1%80%e7%ac%94%e8%ae%b0&amp;body=https%3a%2f%2fdev.hanry.top%2fposts%2f2020%2f08%2fswift5.1%25E5%259F%25BA%25E7%25A1%2580%25E7%25AC%2594%25E8%25AE%25B0%2f" target="_self" rel="noopener" aria-label="" title="Share via email">
+  <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fdev.hanry.top%2fposts%2f2020%2f08%2fswift5.1%25E5%259F%25BA%25E7%25A1%2580%25E7%25AC%2594%25E8%25AE%25B0%2f&amp;media=https%3a%2f%2fdev.hanry.top%2fposts%2f2020%2f08%2fswift5.1%25E5%259F%25BA%25E7%25A1%2580%25E7%25AC%2594%25E8%25AE%25B0%2f;description=Swift5.1%e5%9f%ba%e7%a1%80%e7%ac%94%e8%ae%b0" target="_blank" rel="noopener" aria-label="" title="Share on pinterest">
+  <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fdev.hanry.top%2fposts%2f2020%2f08%2fswift5.1%25E5%259F%25BA%25E7%25A1%2580%25E7%25AC%2594%25E8%25AE%25B0%2f&amp;title=Swift5.1%e5%9f%ba%e7%a1%80%e7%ac%94%e8%ae%b0&amp;summary=Swift5.1%e5%9f%ba%e7%a1%80%e7%ac%94%e8%ae%b0&amp;source=https%3a%2f%2fdev.hanry.top%2fposts%2f2020%2f08%2fswift5.1%25E5%259F%25BA%25E7%25A1%2580%25E7%25AC%2594%25E8%25AE%25B0%2f" target="_blank" rel="noopener" aria-label="" title="Share on linkedin">
+  <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://reddit.com/submit/?url=https%3a%2f%2fdev.hanry.top%2fposts%2f2020%2f08%2fswift5.1%25E5%259F%25BA%25E7%25A1%2580%25E7%25AC%2594%25E8%25AE%25B0%2f&amp;resubmit=true&amp;title=Swift5.1%e5%9f%ba%e7%a1%80%e7%ac%94%e8%ae%b0" target="_blank" rel="noopener" aria-label="" title="Share on reddit">
+  <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fdev.hanry.top%2fposts%2f2020%2f08%2fswift5.1%25E5%259F%25BA%25E7%25A1%2580%25E7%25AC%2594%25E8%25AE%25B0%2f;title=Swift5.1%e5%9f%ba%e7%a1%80%e7%ac%94%e8%ae%b0" target="_blank" rel="noopener" aria-label="" title="Share on xing">
+  <div class="resp-sharing-button resp-sharing-button--xing resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="whatsapp://send?text=Swift5.1%e5%9f%ba%e7%a1%80%e7%ac%94%e8%ae%b0%20https%3a%2f%2fdev.hanry.top%2fposts%2f2020%2f08%2fswift5.1%25E5%259F%25BA%25E7%25A1%2580%25E7%25AC%2594%25E8%25AE%25B0%2f" target="_blank" rel="noopener" aria-label="" title="Share on whatsapp">
+  <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fdev.hanry.top%2fposts%2f2020%2f08%2fswift5.1%25E5%259F%25BA%25E7%25A1%2580%25E7%25AC%2594%25E8%25AE%25B0%2f&amp;t=Swift5.1%e5%9f%ba%e7%a1%80%e7%ac%94%e8%ae%b0" target="_blank" rel="noopener" aria-label="" title="Share on hacker news">
+  <div class="resp-sharing-button resp-sharing-button--hackernews resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M0 24V0h24v24H0zM6.951 5.896l4.112 7.708v5.064h1.583v-4.972l4.148-7.799h-1.749l-2.457 4.875c-.372.745-.688 1.434-.688 1.434s-.297-.708-.651-1.434L8.831 5.896h-1.88z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://telegram.me/share/url?text=Swift5.1%e5%9f%ba%e7%a1%80%e7%ac%94%e8%ae%b0&amp;url=https%3a%2f%2fdev.hanry.top%2fposts%2f2020%2f08%2fswift5.1%25E5%259F%25BA%25E7%25A1%2580%25E7%25AC%2594%25E8%25AE%25B0%2f" target="_blank" rel="noopener" aria-label="" title="Share on telegram">
+  <div class="resp-sharing-button resp-sharing-button--telegram resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+    </div>
+  </div>
+</a>
+
+      </div>
+
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h"></span>
+          <hr />
+        </div>
+
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="https://dev.hanry.top/posts/2020/08/swift5.1%E5%9F%BA%E7%A1%80%E8%BF%90%E7%AE%97%E7%AC%A6/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Swift5.1基础运算符</span>
+              </a>
+            </span>
+          
+
+          
+        </div>
+      </div>
+    
+
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://dev.hanry.top">Made with &#10084; by 萨雷斯煜</a></span>
+            
+            
+                <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            
+            <span> <a href="https://dev.hanry.top/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span><a href="http://www.beian.miit.gov.cn/">«浙ICP备19039272号»</a></span>
+          </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://dev.hanry.top/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+
+
+
+    </body>
+</html>
