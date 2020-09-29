@@ -3,18 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://dev.hanry.top/tags/html/</loc>
-    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
+    <loc>https://dev.hanry.top/posts/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dev.hanry.top/posts/</loc>
-    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
+    <loc>https://dev.hanry.top/tags/swift/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev.hanry.top/tags/swiftui/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev.hanry.top/posts/2020/09/swiftui%E6%96%87%E6%9C%AC/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://dev.hanry.top/tags/</loc>
-    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -28,18 +38,8 @@
   </url>
   
   <url>
-    <loc>https://dev.hanry.top/tags/web/</loc>
-    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dev.hanry.top/posts/2020/09/%E5%88%9D%E6%8E%A2html/</loc>
-    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://dev.hanry.top/</loc>
-    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -53,8 +53,18 @@
   </url>
   
   <url>
-    <loc>https://dev.hanry.top/tags/swift/</loc>
-    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+    <loc>https://dev.hanry.top/tags/html/</loc>
+    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev.hanry.top/tags/web/</loc>
+    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dev.hanry.top/posts/2020/09/%E5%88%9D%E6%8E%A2html/</loc>
+    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
