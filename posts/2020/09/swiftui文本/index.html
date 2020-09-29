@@ -237,10 +237,10 @@ font修饰器可以让你变更字体属性。在上面的程式中，我们指�
 <p>本章，我将告诉你如何以<code>Text</code> 来呈现资讯。你将会学到如何运用不同颜色、字体、背景与旋转效果来自订文字。</p>
 <h3 id="建立新项目来体验swiftui">建立新项目来体验SwiftUI</h3>
 <p>首先，开启Xcode并使用<em>Single View App</em> 模板来建立一个新项目，输入项目名称，我设定为<em>SwiftUIText</em>，不过你可以使用任何的名称。在组织名称（ organization name），你可以设定为你的公司或组织的名字。组织识别码（organization identifier）是App的唯一识别码，这里我使用<em>com.appcoda</em>，不过这里需要填入你自己的内容，如果你有一个网站，则可以将网域名称以倒过来写的方式作为设定。要使用SwiftUI的话，则需要在User Interface选项勾选<code>SwiftUI</code>，点选 <em>Next</em>并选取一个资料夹来建立项目。</p>
-<p><img src="https://www.appcoda.com.tw/learnswiftui/images/text/swiftui-text-1.png" alt="图1. 建立一个新项目"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/FishionYu/Rayyu-sPic@master/img/swiftui-text-1.png" alt="图1. 建立一个新项目"></p>
 <p>储存完项目之后，Xcode即会载入<code>ContentView.swift</code> 档，并显示一个设计画布（ design canvas ）与预览画布（preview canvas）。如果你没有见到这个画布，你可以至Xcode选单，并选取 <em>Editor</em> &gt; <em>Canvas</em>来启用它。</p>
 <p>Xcode预设会在 <code>ContentView.swift</code>上建立一些SwiftUI程式码。不过，这个预览画布不会渲染（render）App预览画面。你必须点选<em>Resume</em> 按钮才能看到这个预览画面。按下按钮之后，Xcode会依照你在模拟器选项（例如iPhone 11 Pro）中的选择来将预览画面渲染在模拟器中。为了让程式编辑器与画布能显示，你可以隐藏项目导览器（project navigator ）与工具面板来释放更多空间。</p>
-<p><img src="https://www.appcoda.com.tw/learnswiftui/images/text/swiftui-text-2.png" alt="图2. 程式编辑器与画布"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/FishionYu/Rayyu-sPic@master/img/swiftui-text-2.png" alt="图2. 程式编辑器与画布"></p>
 <h3 id="简单文字的呈现">简单文字的呈现</h3>
 <p>在<code>ContentView</code> 所产生的简单程式已经告诉你如何显示一行文字。程式初始化一个 <code>Text</code> 并将要放的文字（例如<em>Hello World</em>）作为参数来传传递，显示如下：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">Text(<span style="color:#e6db74">&#34;Hello World&#34;</span>)
@@ -250,7 +250,7 @@ font修饰器可以让你变更字体属性。在上面的程式中，我们指�
 <p>在SwiftUI，你可以呼叫一些方法，也就是所谓的修饰器（<em>Modifiers</em>）来变更属性（例如颜色）。譬如说，你想要粗体字。你可以使用名为<code>fontWeight</code>的修饰器，并指定你想要的字体粗细（例如<code>.bold</code>）：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">Text(<span style="color:#e6db74">&#34;Stay Hungry. Stay Foolish.&#34;</span>).fontWeight(.bold)
 </code></pre></div><p>你可以使用点语法（dot syntax）来存取修饰器。当你输入一个点符号时，Xcode则出现你可能会用到的修饰器或值。举例来说，当你在<code>fontWeight</code>修饰器，输入一个点符号时，你会见到不同的字体粗细选项，你可以选取<code>bold</code>来使用粗体字。如果你想要更粗一点，则可以选取<code>heavy</code>或<code>black</code>。</p>
-<p><img src="https://www.appcoda.com.tw/learnswiftui/images/text/swiftui-text-4.png" alt="图4. 挑选你喜爱的字体粗细"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/FishionYu/Rayyu-sPic@master/img/swiftui-text-4.png" alt="图4. 挑选你喜爱的字体粗细"></p>
 <p>透过<code>fontWeight</code> 修饰器的呼叫，并选取 <code>.bold</code>的值，它会回传一个加上粗体字的视图。SwiftUI有趣的是，你可以进一步串连其他修饰器。譬如说，你想要大一点的粗体字，程式可以修改如下：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">Text(<span style="color:#e6db74">&#34;Stay Hungry. Stay Foolish.&#34;</span>).fontWeight(.bold).font(.title)
 </code></pre></div><p>因为可能会串连多个修饰器，我们通常会将以上的程式写成如下的格式：</p>
@@ -260,11 +260,11 @@ font修饰器可以让你变更字体属性。在上面的程式中，我们指�
 </code></pre></div><p>这个功能是一样的，不过我相信你会发现到以上的程式更容易阅读。我们将继续在本书中使用这样的程式写法。</p>
 <p><code>font</code>修饰器可以让你变更字体属性。在上面的程式中，我们指定使用<em>title</em>字体以放大文字。SwiftUI内有几个内建的字体样式，包括<em>title</em>、<em>largeTitle</em>、<em>body</em>等等。如果你想要加大字体大小，则可以将<code>.title</code>改成<code>.largeTitle</code>。</p>
 <p><em>提示：你可以参考这份文件（<a href="https://developer.apple.com/documentation/swiftui/font%EF%BC%89%E4%BE%86%E6%89%BE%E5%87%BA%E6%89%80%E6%9C%89">https://developer.apple.com/documentation/swiftui/font）来找出所有</a><code>font</code>修饰器所支援的值。</em></p>
-<p><img src="https://www.appcoda.com.tw/learnswiftui/images/text/swiftui-text-5.png" alt="图5. 变更字体样式"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/FishionYu/Rayyu-sPic@master/img/swiftui-text-5.png" alt="图5. 变更字体样式"></p>
 <p>你也可以使用 <code>font</code>修饰器来指定字体设计，譬如说，你想要字体圆润。你可以将修饰器撰写如下：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">.font(.system(.largeTitle, design: .rounded))
 </code></pre></div><p>这里你指定使用系统字体，文字样式为<code>largeTitle</code> ，以及 <code>rounded</code> 设计。预览画布应该会立即对变更做出反应，并显示圆润的文字。</p>
-<p><img src="https://www.appcoda.com.tw/learnswiftui/images/text/swiftui-text-6.png" alt="图6.使用圆字体设计"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/FishionYu/Rayyu-sPic@master/img/swiftui-text-6.png" alt="图6.使用圆字体设计"></p>
 <p>动态型态（ Dynamic Type ）是iOS依照使用者设定（设定&gt;萤幕显示与亮度&gt;文字大小）而自动调整字体大小的功能。换句话说，当你使用文字样式（例如<code>.title</code>），这个字体大小将会改变，你的App会依照使用者的偏好来自动缩放文字。</p>
 <p>如果你想要使用一个固定大小的字体，你可以将程式修改如下：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">.font(.system(size: <span style="color:#ae81ff">20</span>))
@@ -272,16 +272,16 @@ font修饰器可以让你变更字体属性。在上面的程式中，我们指�
 <p>如所述，你可以继续串连其他修饰器来客制化文字。现在我们来变更字体颜色。你可以使用<code>foregroundColor</code> 修饰器来完成，如下所示：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">.foregroundColor(.green)
 </code></pre></div><p><code>foregroundColor</code>修饰器接收<code>顏色</code>的值。这里我们指定使用 <code>.green</code>，这个值是内建颜色，你也可以使用其他像是<code>.red</code>、<code>.purple</code>等内建颜色值。</p>
-<p><img src="https://www.appcoda.com.tw/learnswiftui/images/text/swiftui-text-7.png" alt="图7. 变更字体颜色"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/FishionYu/Rayyu-sPic@master/img/swiftui-text-7.png" alt="图7. 变更字体颜色"></p>
 <p>虽然我们比较喜欢使用程式码自订一个控制元件的属性，你也可以使用设计画布来编辑。按住command键不放，并点选文字来带出弹出选单，选取 <em>Inspect&hellip;</em>，然后你可以编辑text/font属性。</p>
-<p><img src="https://www.appcoda.com.tw/learnswiftui/images/text/swiftui-text-8.png" alt="图8. 使用Inspect 功能来编辑文字属性"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/FishionYu/Rayyu-sPic@master/img/swiftui-text-8.png" alt="图8. 使用Inspect 功能来编辑文字属性"></p>
 <h3 id="使用自订字体">使用自订字体</h3>
 <p>预设所有显示字体都是使用系统字体。如果你想要使用其他字体，你可以将以下这行程式：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">.font(.system(size: <span style="color:#ae81ff">20</span>))
 </code></pre></div><p>以这行取代：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">.font(.custom(<span style="color:#e6db74">&#34;Helvetica Neue&#34;</span>, size: <span style="color:#ae81ff">25</span>))
 </code></pre></div><p>除了使用<code>.system</code>，以上的程式使用 <code>.custom</code> 并指定偏好的字体名称。字体名称可以在字体簿（ Font Book）找到，你可以打开Finder &gt;应用程式，并点选<em>字体簿</em>来开启App。</p>
-<p><img src="https://www.appcoda.com.tw/learnswiftui/images/text/swiftui-text-9.png" alt="图9. 字体簿"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/FishionYu/Rayyu-sPic@master/img/swiftui-text-9.png" alt="图9. 字体簿"></p>
 <h3 id="多行文字的处理">多行文字的处理</h3>
 <p><code>Text</code> 预设支援多行文字，所以它可以显示一段文字，而不需要使用任何其他修饰器，将程式以下面这段替换：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">Text(<span style="color:#e6db74">&#34;Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma—which is living with the results of other people’s thinking. Don’t let the noise of others’ opinions drown out your own inner voice. And most important, have the courage to follow your heart and intuition.&#34;</span>)
@@ -289,7 +289,7 @@ font修饰器可以让你变更字体属性。在上面的程式中，我们指�
     .font(.title)
     .foregroundColor(.gray)
 </code></pre></div><p>你可以将这段文字换成你自己的内容。只要确认内容长度够长即可。做完变更后，设计画布应该会渲染一个多行文字标签。</p>
-<p><img src="https://www.appcoda.com.tw/learnswiftui/images/text/swiftui-text-10.png" alt="图10. 显示多行文字"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/FishionYu/Rayyu-sPic@master/img/swiftui-text-10.png" alt="图10. 显示多行文字"></p>
 <p>要将文字置中对齐，插入 <code>multilineTextAlignment</code>修饰器，并设定值为 <code>.center</code>如下：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">.multilineTextAlignment(.center)
 </code></pre></div><p>在某些情况下，想要限制固定的行数的话，你可以使用<code>lineLimit</code> 修饰器。以下为例：</p>
@@ -297,7 +297,7 @@ font修饰器可以让你变更字体属性。在上面的程式中，我们指�
 </code></pre></div><p>系统预设设定是截断字尾。要修改文字的截断模式，你可以使用<code>truncationMode</code>修饰器，并设定它的值为 <code>.head</code>或 <code>.middle</code>，如下所示：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">.truncationMode(.head)
 </code></pre></div><p>变更完成之后，你的文字会如下图所示。</p>
-<p><img src="https://www.appcoda.com.tw/learnswiftui/images/text/swiftui-text-11.png" alt="图11. 使用.head 截断模式"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/FishionYu/Rayyu-sPic@master/img/swiftui-text-11.png" alt="图11. 使用.head 截断模式"></p>
 <p>先前我提到 <code>Text</code>控制预设是显示多行文字。理由是SwiftUI框架预设 <code>lineLimit</code>修饰器为 <code>nil</code>的值，你可以将<code>.lineLimit</code> 设定为<code>nil</code>来看一下结果：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">.lineLimit(<span style="color:#66d9ef">nil</span>)
 </code></pre></div><h3 id="设定间距与行距">设定间距与行距</h3>
@@ -306,24 +306,24 @@ font修饰器可以让你变更字体属性。在上面的程式中，我们指�
 </code></pre></div><p>如你所见，文字太靠近边缘的左侧与右侧。要赋予更多间距，你可以使用 <code>padding</code>修饰器，为文字的每一边增加一些间距。在<code>lineSpacing</code>修饰器后面插入以下这行程式：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">.padding()
 </code></pre></div><p>设计画布现在的结果如下：</p>
-<p><img src="https://www.appcoda.com.tw/learnswiftui/images/text/swiftui-text-12.png" alt="图12. 设定间距与文字行距"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/FishionYu/Rayyu-sPic@master/img/swiftui-text-12.png" alt="图12. 设定间距与文字行距"></p>
 <h3 id="文字的旋转">文字的旋转</h3>
 <p>SwiftUI框架提供了可以轻易旋转文字的API，你可以像这样使用<code>rotateEffect</code> 修饰器，并传入旋转角度：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">.rotationEffect(.degrees(<span style="color:#ae81ff">45</span>))
 </code></pre></div><p>如果你在<code>padding()</code>后面插入以上这行程式，你将会见到文字旋转45度。</p>
-<p><img src="https://www.appcoda.com.tw/learnswiftui/images/text/swiftui-text-13.png" alt="图13. 旋转文字"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/FishionYu/Rayyu-sPic@master/img/swiftui-text-13.png" alt="图13. 旋转文字"></p>
 <p>预设，旋转动作会以文字视图为中心来旋转，如果你想要将文字以特定点来旋转（譬如左上角），程式的写法如下：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">.rotationEffect(.degrees(<span style="color:#ae81ff">20</span>), anchor: UnitPoint(x: <span style="color:#ae81ff">0</span>, y: <span style="color:#ae81ff">0</span>))
 </code></pre></div><p>我们另外传入<code>anchor</code> 参数来指定旋转点。</p>
-<p><img src="https://www.appcoda.com.tw/learnswiftui/images/text/swiftui-text-14.png" alt="图14. 以文字视图的左上角来旋转"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/FishionYu/Rayyu-sPic@master/img/swiftui-text-14.png" alt="图14. 以文字视图的左上角来旋转"></p>
 <p>你不止可以进行2D旋转， SwiftUI提供一个称作 <code>rotation3DEffect</code> 修饰器，可以让你建立3D效果。这个修饰器有两个参数：「旋转角度」与「旋转轴」，譬如你要建立透视文字特效，程式可以这样写：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">.rotation3DEffect(.degrees(<span style="color:#ae81ff">60</span>), axis: (x: <span style="color:#ae81ff">1</span>, y: <span style="color:#ae81ff">0</span>, z: <span style="color:#ae81ff">0</span>))
 </code></pre></div><p>只要一行程式，你就可以建立星际大战透视（ Star Wars perspective ）文字</p>
-<p><img src="https://www.appcoda.com.tw/learnswiftui/images/text/swiftui-text-15.png" alt="图15. 使用3D 旋转建立惊艳的文字效果"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/FishionYu/Rayyu-sPic@master/img/swiftui-text-15-20200929190304069.png" alt="图15. 使用3D 旋转建立惊艳的文字效果"></p>
 <p>你还可以插入以下这行程式来对透视文字建立阴影效果</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">.shadow(color: .gray, radius: <span style="color:#ae81ff">2</span>, x: <span style="color:#ae81ff">0</span>, y: <span style="color:#ae81ff">15</span>)
 </code></pre></div><p>这个 <code>shadow</code> 修饰器将会对文字应用阴影效果，你只需要指定颜色与阴影半径。另外，你也可以告诉系统<code>x</code>与<code>y</code>值来指定阴影位置</p>
-<p><img src="https://www.appcoda.com.tw/learnswiftui/images/text/swiftui-text-16.png" alt="图16. 应用阴影效果"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/FishionYu/Rayyu-sPic@master/img/swiftui-text-16.png" alt="图16. 应用阴影效果"></p>
 
       </div>
     </article>
