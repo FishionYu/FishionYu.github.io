@@ -18,7 +18,22 @@
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://dev.hanry.top/posts/2020/09/swiftui%E6%96%87%E6%9C%AC/</guid>
-      <description></description>
+      <description>如果你之前有使用过UIKit，SwiftUI的Text控制与UIKit中的UILabel非常相似。这是一个能够显示一行或多行文字的视图。这个 Text控制无法编辑，不过对于在萤幕上呈现唯读的资讯非常好用。举例来说，你想要在画面上呈现一个讯息，你可以使用Text 来实作。
+本章，我将告诉你如何以Text 来呈现资讯。你将会学到如何运用不同颜色、字体、背景与旋转效果来自订文字。
+建立新项目来体验SwiftUI 首先，开启Xcode并使用Single View App 模板来建立一个新项目，输入项目名称，我设定为SwiftUIText，不过你可以使用任何的名称。在组织名称（ organization name），你可以设定为你的公司或组织的名字。组织识别码（organization identifier）是App的唯一识别码，这里我使用com.appcoda，不过这里需要填入你自己的内容，如果你有一个网站，则可以将网域名称以倒过来写的方式作为设定。要使用SwiftUI的话，则需要在User Interface选项勾选SwiftUI，点选 Next并选取一个资料夹来建立项目。
+储存完项目之后，Xcode即会载入ContentView.swift 档，并显示一个设计画布（ design canvas ）与预览画布（preview canvas）。如果你没有见到这个画布，你可以至Xcode选单，并选取 Editor &amp;gt; Canvas来启用它。
+Xcode预设会在 ContentView.swift上建立一些SwiftUI程式码。不过，这个预览画布不会渲染（render）App预览画面。你必须点选Resume 按钮才能看到这个预览画面。按下按钮之后，Xcode会依照你在模拟器选项（例如iPhone 11 Pro）中的选择来将预览画面渲染在模拟器中。为了让程式编辑器与画布能显示，你可以隐藏项目导览器（project navigator ）与工具面板来释放更多空间。
+简单文字的呈现 在ContentView 所产生的简单程式已经告诉你如何显示一行文字。程式初始化一个 Text 并将要放的文字（例如Hello World）作为参数来传传递，显示如下：
+Text(&amp;#34;Hello World&amp;#34;) 如此，预览画布即会在萤幕上显示 Hello World。这是建立一个文字视图的基本语法。你可以任意变更文字内容，画布会即时显示变更的结果。
+变更字体与颜色 在SwiftUI，你可以呼叫一些方法，也就是所谓的修饰器（Modifiers）来变更属性（例如颜色）。譬如说，你想要粗体字。你可以使用名为fontWeight的修饰器，并指定你想要的字体粗细（例如.bold）：
+Text(&amp;#34;Stay Hungry. Stay Foolish.&amp;#34;).fontWeight(.bold) 你可以使用点语法（dot syntax）来存取修饰器。当你输入一个点符号时，Xcode则出现你可能会用到的修饰器或值。举例来说，当你在fontWeight修饰器，输入一个点符号时，你会见到不同的字体粗细选项，你可以选取bold来使用粗体字。如果你想要更粗一点，则可以选取heavy或black。
+透过fontWeight 修饰器的呼叫，并选取 .bold的值，它会回传一个加上粗体字的视图。SwiftUI有趣的是，你可以进一步串连其他修饰器。譬如说，你想要大一点的粗体字，程式可以修改如下：
+Text(&amp;#34;Stay Hungry. Stay Foolish.&amp;#34;).fontWeight(.bold).font(.title) 因为可能会串连多个修饰器，我们通常会将以上的程式写成如下的格式：
+Text(&amp;#34;Stay Hungry. Stay Foolish.&amp;#34;) .fontWeight(.bold) .font(.title) 这个功能是一样的，不过我相信你会发现到以上的程式更容易阅读。我们将继续在本书中使用这样的程式写法。
+font修饰器可以让你变更字体属性。在上面的程式中，我们指定使用title字体以放大文字。SwiftUI内有几个内建的字体样式，包括title、largeTitle、body等等。如果你想要加大字体大小，则可以将.title改成.largeTitle。
+提示：你可以参考这份文件（https://developer.apple.com/documentation/swiftui/font）来找出所有font修饰器所支援的值。
+你也可以使用 font修饰器来指定字体设计，譬如说，你想要字体圆润。你可以将修饰器撰写如下：
+.font(.system(.largeTitle, design: .</description>
     </item>
     
   </channel>
