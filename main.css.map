@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/Users/rayhan/Documents/Develop/hugoblog 2/devblog",
+	"sourceRoot": "/Users/rayhan/Documents/Develop/hugoblog/devblog",
 	"sources": [
 		"themes/hello-friend-ng/assets/scss/main.scss",
 		"themes/hello-friend-ng/assets/scss/_normalize.scss",

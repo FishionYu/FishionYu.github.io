@@ -7,55 +7,9 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 28 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://dev.hanry.top/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Swift</title>
-      <link>https://dev.hanry.top/tags/swift/</link>
-      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dev.hanry.top/tags/swift/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SwiftUI</title>
-      <link>https://dev.hanry.top/tags/swiftui/</link>
-      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dev.hanry.top/tags/swiftui/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Html</title>
-      <link>https://dev.hanry.top/tags/html/</link>
-      <pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dev.hanry.top/tags/html/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Web</title>
-      <link>https://dev.hanry.top/tags/web/</link>
-      <pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dev.hanry.top/tags/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Develop</title>
-      <link>https://dev.hanry.top/tags/develop/</link>
-      <pubDate>Sat, 29 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dev.hanry.top/tags/develop/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
